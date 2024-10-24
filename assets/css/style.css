@@ -25,6 +25,35 @@ font-family: 'Poppins', sans-serif;
 /*-------------------------------------
 		1.General css (Reset code)
 --------------------------------------*/
+
+/* My Additions */
+.none {
+  /* Image is not scaled */ 
+  object-fit: none;
+}
+
+.fill {
+  /* Image is scaled to fill the container. */
+  /* Aspect ratio IS NOT maintained */
+  object-fit: fill;
+}
+
+.cover {
+  /* Image is scaled to fill the container. */
+  /* Aspect ratio IS maintained */
+  object-fit: cover;
+}
+.contain {
+  /* Image is scaled to fit within the container. */
+  /* Aspect ratio IS maintained */
+  object-fit: contain;
+}
+
+.scale-down {
+  /* Uses either 'none' or 'contain' to produce the smallest image size */
+  object-fit: scale-down;
+}
+/*-------------------------------------*/
 *{
     padding: 0;
     margin: 0;
