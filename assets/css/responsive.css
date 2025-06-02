@@ -79,12 +79,44 @@
 }/*max-width:540px*/
 
 @media screen and (max-width: 480px){
+	.welcome-hero .header-text h2 { font-size: 32px; }
+	h2.bigtitle, .section-heading h2 {font-size: 26px; margin-bottom: 25px;}
+	.about-content {margin-top: 40px;}
+	.single-about-txt h3 {font-size: 15px; line-height: 1.6;}
+	.single-about-txt ul li {font-size: 14px; line-height: 1.6; margin-bottom: 15px !important;}
+	.single-about-add-info {margin-bottom: 15px;}
+	.timeline-content p.description {font-size: 14px; line-height: 1.6;}
+	/* Better spacing in experience section */
+	.single-timeline-box {margin-bottom: 30px;}
+	/* Improved form elements */
+	.contact-form form .form-group {margin-bottom: 20px;}
+	.contact-form input, .contact-form textarea {padding: 12px; font-size: 15px;}
+	/* Better portfolio display on mobile */
+	.isotope .item {margin-bottom: 25px;}
 	
+	/* Resume button responsive styling */
+	.header-text .resume-download-btn {
+		min-width: 180px !important;
+		padding: 10px 25px !important;
+		font-size: 13px !important;
+		margin-top: 15px !important;
+	}
 }/*max-width:480px*/
 
 @media screen and (max-width: 440px){
+	.welcome-hero .header-text h2 { font-size: 28px; }
+	.welcome-hero .header-text p { font-size: 16px; margin-bottom: 20px; }
+	.welcome-hero .header-text a { padding: 10px 20px; font-size: 14px; }
+	.education-horizontal-timeline .row .col-sm-4 {margin-bottom: 30px;}
+	.single-profile {max-width: 280px;}
 	
-}/*max-width:400px*/
+	/* Smaller resume button for very small screens */
+	.header-text .resume-download-btn {
+		min-width: 160px !important;
+		padding: 8px 20px !important;
+		font-size: 12px !important;
+	}
+}/*max-width:440px*/
 
 @media screen and (max-width:350px){
 

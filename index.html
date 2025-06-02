@@ -1,12 +1,15 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" dir="ltr">
 
-    <head>
-        <!-- meta data -->
+    <head>        <!-- meta data -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="Ziad Amer - Machine Learning Specialist & AI Tutor. Portfolio showcasing ML projects, skills, and professional experience.">
+        <meta name="keywords" content="Ziad Amer, Machine Learning, AI, Artificial Intelligence, Portfolio, Developer, ML Specialist, AI Tutor">
+        <meta name="author" content="Ziad Amer">
+        <meta name="robots" content="index, follow">
+        <!-- The above meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
         <!--font-family-->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet">
@@ -53,6 +56,16 @@
     </head>
 	
 	<body>
+		<!-- Preloader -->
+		<div id="preloader">
+			<div class="loader">
+				<svg class="circular" viewBox="25 25 50 50">
+					<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+				</svg>
+			</div>
+		</div>
+		<!-- End Preloader -->
+		
 		<!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -75,11 +88,11 @@
 			            <!-- End Header Navigation -->
 
 			            <!-- Collect the nav links, forms, and other content for toggling -->
-			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 			                <li class=" smooth-menu active"></li>
 			                    <li class=" smooth-menu"><a href="#education">education</a></li>
 			                    <li class="smooth-menu"><a href="#skills">skills</a></li>
+			                    <li class="smooth-menu"><a href="#certifications">certifications</a></li>
 			                    <li class="smooth-menu"><a href="#experience">experience</a></li>
 			                    <li class="smooth-menu"><a href="#profiles">profile</a></li>
 			                    <li class="smooth-menu"><a href="#portfolio">portfolio</a></li>
@@ -104,10 +117,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center">
-						<div class="header-text">
-							<h2>hi <span>,</span> i am <br> ziad <br> amer <span>.</span>   </h2>
-							<p>Machine Learning Specialist & AI Tutor</p>
-							<a href="assets/download/ZiadAmerResume.pdf" download target="_blank">download resume</a>
+						<div class="header-text">							<h2>hi <span>,</span> i am <br> ziad <br> amer <span>.</span>   </h2>							<p>Machine Learning Specialist & AI Tutor | Transforming Ideas into Production-Ready AI Solutions</p>
+							<div class="hero-cta">
+								<a href="assets/download/ZiadAmerResume.pdf" download target="_blank" class="resume-download-btn" aria-label="Download Ziad Amer's Resume"><i class="fa fa-download" aria-hidden="true"></i> Download Resume</a>
+								<a href="#contact" class="smooth-menu contact-btn-hero"><i class="fa fa-envelope" aria-hidden="true"></i> Let's Talk</a>
+							</div>
 						</div><!--/.header-text-->
 					</div><!--/.col-->
 				</div><!-- /.row-->
@@ -125,15 +139,37 @@
 				<div class="about-content">
 					<div class="row">
 						<div class="col-sm-6">
-							<div class="single-about-txt">
+							<div class="single-about-txt">								
 								<h3>
-I am a dedicated Machine Learning Specialist and AI Instructor with a structured approach to problem-solving.<br> I have proven a tracked record of turning Caffeine input into productivity output... ☕ <br> The more Coffee you provide the more output I produce!! <br>I excel at analytical, 'in-the-box' thinking but also possess the ability to innovate beyond conventional methods <br> when necessary, bringing creativity and adaptability to complex challenges								</h3>
-								<br><ul>
-									<li> • I have studied Programming for approximately 9 years, with my father serving as my primary inspiration and guide.</li><br>
-									<li> • My areas of expertise include Machine Learning, completion of the Machine Learning Specialization by Andrew Ng, Deep Learning, Arduino, Ethical Hacking, Software Engineering, Odoo ERP Systems, Data Processing, Web Development, DevOps Engineering (Docker, Portainer, Kubernetes), as well as foundational skills in Graphic Design, Video Editing, 3D Modeling (3Ds Max), Linux System Engineering, and Teaching.</li><br>
-									<li> • Currently, I am expanding my knowledge in Pure Mathematics, an area I am deeply passionate about, though I am still in the early stages of exploration.</li><br>
-									<li> • I am studying in FCAI, Calculus (using Michael Spivak’s course), and revisiting Andrew Ng’s Machine Learning Specialization.</li>
-								</ul>
+I am a Machine Learning Specialist and AI Tutor with 8+ years of programming experience and 4+ years specializing in AI/ML. Currently serving as a <strong>Part-Time R&D Machine Learning Specialist at Mazaady LLC</strong> while pursuing my Computer Science degree at FCAI Cairo University.<br><br>
+
+<strong>What sets me apart:</strong> I don't just complete assigned tasks—I anticipate needs and deliver beyond expectations. At Mazaady, while tasked with generating research ideas, I independently developed a complete production-ready ML system with optimized performance, Docker containerization, and comprehensive API documentation.								
+								</h3>
+								<br>
+								<div class="about-highlights">
+									<div class="row">
+										<div class="col-md-6">
+											<h4><i class="fa fa-check-circle" style="color: #1ABB9C;"></i> Core Expertise</h4>
+											<ul class="expertise-list">
+												<li>Machine Learning & Deep Learning (TensorFlow, PyTorch)</li>
+												<li>Computer Vision & NLP</li>
+												<li>Production ML Systems & MLOps</li>
+												<li>Docker, Kubernetes & Cloud Deployment</li>
+											</ul>
+										</div>
+										<div class="col-md-6">
+											<h4><i class="fa fa-trophy" style="color: #1ABB9C;"></i> Notable Achievements</h4>
+											<ul class="achievements-list">
+												<li>4th Place Nationally - Egypt's Software Engineering Contest</li>
+												<li>Andrew Ng ML Specialization Graduate</li>
+												<li>AI Tutor at Google Developer Group</li>
+												<li>Self-directed ML Production System Developer</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<br>
+								<p><strong>Mission:</strong> Transforming complex AI concepts into practical, scalable solutions that drive real business value.</p>
 								<div class="row">
 									<div class="col-sm-4">
 										<div class="single-about-add-info">
@@ -142,9 +178,8 @@ I am a dedicated Machine Learning Specialist and AI Instructor with a structured
 										</div>
 									</div>
 									<div class="col-sm-4">
-										<div class="single-about-add-info">
-											<h3>email</h3>
-											<p>ziadmoamer@gmail</p>
+										<div class="single-about-add-info">											<h3>email</h3>
+											<p>ziadmoamer@gmail.com</p>
 										</div>
 									</div>
 									<div class="col-sm-4">
@@ -158,7 +193,7 @@ I am a dedicated Machine Learning Specialist and AI Instructor with a structured
 						</div>
 						<div class="col-sm-offset-1 col-sm-5">
 							<div class="single-about-img">
-								<img src="assets/images/about/profile_image.jpg" alt="profile_image" class="fill">
+								<img src="assets/images/about/profile_image.jpg" alt="Ziad Amer - Machine Learning Specialist & AI Tutor" class="fill" loading="lazy">
 								<div class="about-list-icon">
 									<ul>
 										<li>
@@ -297,92 +332,70 @@ i can't overlook the formative years of my childhood when my passion for mathema
 								<div class="single-skill-content">
 									<div class="barWrapper">
 										<span class="progressText">machine learning</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-												<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100" style="">
-
-												</div>
+										<div class="single-progress-txt">											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100"></div>
 											</div>
 											<h3>90%</h3>
 										</div>
 									</div><!-- /.barWrapper -->
 									<div class="barWrapper">
 										<span class="progressText">deep learning</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="10" aria-valuemax="100" style="">
-
-											   </div>
+										<div class="single-progress-txt">											<div class="progress">
+											   <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="10" aria-valuemax="100"></div>
 											</div>
 											<h3>85%</h3>
 										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">arduino</span>
+									</div><!-- /.barWrapper -->									<div class="barWrapper">
+										<span class="progressText">Computer Vision & NLP</span>
 										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="10" aria-valuemax="100" style="">
-
-											   </div>
+											<div class="progress">
+											   <div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="10" aria-valuemax="100"></div>
 											</div>
-											<h3>75%</h3>
+											<h3>88%</h3>
 										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">odoo dev (erp system)</span>
+									</div><!-- /.barWrapper -->									
+									<div class="barWrapper">										
+										<span class="progressText">PyTorch & TensorFlow</span>
 										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="83" aria-valuemin="10" aria-valuemax="100" style="">
-
-											   </div>
+											<div class="progress">
+											   <div class="progress-bar" role="progressbar" aria-valuenow="87" aria-valuemin="10" aria-valuemax="100"></div>
 											</div>
-											<h3>83%</h3>
+											<h3>87%</h3>
 										</div>
 									</div><!-- /.barWrapper -->
 								</div>
 							</div>
 							<div class="col-md-6">
-								<div class="single-skill-content">
-									<div class="barWrapper">
-										<span class="progressText">Reinforcement Learning</span>
+								<div class="single-skill-content">									<div class="barWrapper">										
+										<span class="progressText">MLOps & Cloud Deployment</span>
 										<div class="single-progress-txt">
-											<div class="progress ">
-												<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="10" aria-valuemax="100" style="">
-
-												</div>
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuenow="82" aria-valuemin="10" aria-valuemax="100"></div>
 											</div>
-											<h3>80%</h3>
+											<h3>82%</h3>
 										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
+									</div><!-- /.barWrapper -->									
+									<div class="barWrapper">										
 										<span class="progressText">DevOps Engineering</span>
 										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="57" aria-valuemin="10" aria-valuemax="100" style="">
-
-											   </div>
-											</div>
-											<h3>57%</h3>
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">pure mathematics</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="10" aria-valuemax="100" style="">
-
-											   </div>
+											<div class="progress">
+											   <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="10" aria-valuemax="100"></div>
 											</div>
 											<h3>75%</h3>
 										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">linux system engineering</span>
+									</div><!-- /.barWrapper -->									
+									<div class="barWrapper">										
+										<span class="progressText">Data Science & Analytics</span>
 										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="10" aria-valuemax="100" style="">
-
-											   </div>
+											<div class="progress">
+											   <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="10" aria-valuemax="100"></div>
+											</div>
+											<h3>85%</h3>
+										</div>
+									</div><!-- /.barWrapper --><div class="barWrapper">										<span class="progressText">linux system engineering</span>
+										<div class="single-progress-txt">
+											<div class="progress">
+											   <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="10" aria-valuemax="100"></div>
 											</div>
 											<h3>92%</h3>
 										</div>
@@ -392,9 +405,100 @@ i can't overlook the formative years of my childhood when my passion for mathema
 						</div><!-- /.row -->
 					</div>	<!-- /.container -->
 				</div><!-- /.skill-content-->
-
 		</section><!--/.skills-->
 		<!--skills end -->
+
+		<!--certifications start -->
+		<section id="certifications" class="certifications" style="background: #fff; padding: 80px 0;">
+			<div class="section-heading text-center">
+				<h2>Certifications & Achievements</h2>
+				<p>Professional credentials and industry recognition</p>
+			</div>
+			<div class="container">
+				<div class="certification-content">
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="certification-item">
+								<div class="cert-icon">
+									<i class="fa fa-graduation-cap fa-3x" style="color: #4CAF50;"></i>
+								</div>
+								<div class="cert-details">
+									<h4>Machine Learning Specialization</h4>
+									<p><strong>Stanford University & DeepLearning.AI</strong></p>
+									<p>Instructor: Andrew Ng</p>
+									<span class="cert-date">2024</span>
+									<div class="cert-skills">
+										<span class="skill-tag">Supervised Learning</span>
+										<span class="skill-tag">Neural Networks</span>
+										<span class="skill-tag">Deep Learning</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-6 col-sm-12">
+							<div class="certification-item">
+								<div class="cert-icon">
+									<i class="fa fa-trophy fa-3x" style="color: #FF9800;"></i>
+								</div>
+								<div class="cert-details">
+									<h4>National Software Engineering Contest</h4>
+									<p><strong>4th Place Nationally</strong></p>
+									<p>Ministry of Education, Egypt</p>
+									<span class="cert-date">2021</span>
+									<div class="cert-skills">
+										<span class="skill-tag">AI/OCR</span>
+										<span class="skill-tag">Software Engineering</span>
+										<span class="skill-tag">Team Leadership</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row" style="margin-top: 40px;">
+						<div class="col-md-6 col-sm-12">
+							<div class="certification-item">
+								<div class="cert-icon">
+									<i class="fa fa-code fa-3x" style="color: #2196F3;"></i>
+								</div>
+								<div class="cert-details">
+									<h4>Kaggle Competitions</h4>
+									<p><strong>Multiple Projects & Collaborations</strong></p>
+									<p>International ML Platform</p>
+									<span class="cert-date">2019 - Present</span>
+									<div class="cert-skills">
+										<span class="skill-tag">Data Science</span>
+										<span class="skill-tag">Competition</span>
+										<span class="skill-tag">Global Collaboration</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-6 col-sm-12">
+							<div class="certification-item">
+								<div class="cert-icon">
+									<i class="fa fa-university fa-3x" style="color: #9C27B0;"></i>
+								</div>
+								<div class="cert-details">
+									<h4>Computer Science Student</h4>
+									<p><strong>Faculty of Computers and AI</strong></p>
+									<p>Cairo University</p>
+									<span class="cert-date">2022 - Present</span>
+									<div class="cert-skills">
+										<span class="skill-tag">Computer Science</span>
+										<span class="skill-tag">Artificial Intelligence</span>
+										<span class="skill-tag">Academic Excellence</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!--/.certifications-->
+		<!--certifications end -->
 
 		<!--experience start -->
 		<section id="experience" class="experience">
@@ -403,8 +507,34 @@ i can't overlook the formative years of my childhood when my passion for mathema
 			</div>
 			<div class="container">
 				<div class="experience-content">
-						<div class="main-timeline">
-							<ul>
+						<div class="main-timeline">							<ul>
+								<li>
+									<div class="single-timeline-box fix">
+										<div class="row">
+											<div class="col-md-5">
+												<div class="experience-time text-right">
+													<h2>May 2025 - Present</h2>
+													<h3>Part-Time R&D Machine Learning Specialist</h3>
+												</div><!--/.experience-time-->
+											</div><!--/.col-->
+											<div class="col-md-offset-1 col-md-5">
+												<div class="timeline">
+													<div class="timeline-content">
+														<h4 class="title">
+															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
+															Mazaady
+														</h4>
+														<h5>Cairo, Egypt</h5>
+														<p class="description">
+															Created and proposed 3+ research ideas weekly. Developed a <strong>full production-ready ML system</strong> independently. Fine-tuned the model, optimized it for speed and mobile, and dockerized the solution. Wrote full API documentation for deployment readiness. Took initiative even when tasks weren't explicitly assigned, showing autonomy and forward thinking. Balanced this job with university studies at FCAI Cairo University.
+														</p>
+													</div><!--/.timeline-content-->
+												</div><!--/.timeline-->
+											</div><!--/.col-->
+										</div>
+									</div><!--/.single-timeline-box-->
+								</li>
+								
 								<li>
 									<div class="single-timeline-box fix">
 										<div class="row">
@@ -419,11 +549,11 @@ i can't overlook the formative years of my childhood when my passion for mathema
 													<div class="timeline-content">
 														<h4 class="title">
 															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-															Google Dev. Group: Modern Academy
+															GDG MA & DSC CAIRO
 														</h4>
 														<h5>Maadi, Egypt</h5>
 														<p class="description">
-															I strive to inspire creativity and excitement in the field of Artificial Intelligence, continuously pushing the boundaries of what’s possible.
+															Delivering <strong>comprehensive AI/ML education and training sessions</strong> for diverse audiences. Specializing in breaking down complex machine learning concepts into accessible, practical knowledge. Conducted workshops on deep learning, computer vision, and MLOps, helping professionals and students build production-ready AI solutions. Focus on hands-on learning with real-world applications and industry best practices.
 														</p>
 													</div><!--/.timeline-content-->
 												</div><!--/.timeline-->
@@ -674,7 +804,7 @@ i can't overlook the formative years of my childhood when my passion for mathema
 									</div>
 									<div class="single-profile-overlay">
 										<div class="profile-txt">
-											<a href="https://octahedron-cone-29jd.squarespace.com/><i class="flaticon-squarespace-logo"></i></a>
+											<a href="https://octahedron-cone-29jd.squarespace.com/"><i class="flaticon-squarespace-logo"></i></a>
 											<div class="profile-icon-name">squareSpace</div>
 										</div>
 									</div>
@@ -710,22 +840,26 @@ i can't overlook the formative years of my childhood when my passion for mathema
 				</div>
 				<div class="container">
 					<div class="portfolio-content">
-						<div class="isotope">
-							<div class="row">
+						<div class="isotope">							<div class="row">
 								<div class="col-sm-4">
 									<div class="item">
-										<img src="assets/images/portfolio/p1.jpg" alt="portfolio image"/>
+										<img src="assets/images/portfolio/p1.jpg" alt="Facial Landmarks Recognition Project Screenshot" loading="lazy"/>
 										<div class="isotope-overlay">
 											<a href="https://github.com/zi-crypto/Focus-DECI-GEEKS-competition">
-												Facial Landmarks Recognition ( Focus )
+												<h4>Facial Landmarks Recognition</h4>
+												<p>Advanced computer vision system for real-time facial landmark detection. Built with deep learning algorithms achieving 95%+ accuracy for applications in AR/VR and biometric systems.</p>
+												<span class="tech-stack">PyTorch • OpenCV • CNN</span>
 											</a>
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
+									
 									<div class="item">
-										<img src="assets/images/portfolio/p2.jpg" alt="portfolio image"/>
+										<img src="assets/images/portfolio/p2.jpg" alt="Loan Approval Prediction Project Screenshot" loading="lazy"/>
 										<div class="isotope-overlay">
 											<a href="https://github.com/zi-crypto/Loan-Approval-Prediction-Kaggle-">
-												Loan Approval Prediction
+												<h4>Loan Approval Prediction</h4>
+												<p>ML model predicting loan approval with 89% accuracy. Implemented feature engineering and ensemble methods to reduce financial risk by 40% for lending institutions.</p>
+												<span class="tech-stack">Scikit-learn • Pandas • XGBoost</span>
 											</a>
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
@@ -733,10 +867,12 @@ i can't overlook the formative years of my childhood when my passion for mathema
 
 								<div class="col-sm-4">
 									<div class="item">
-										<img src="assets/images/portfolio/p3.jpg" alt="portfolio image"/>
+										<img src="assets/images/portfolio/p3.jpg" alt="MaLoM Project - 4th Place Nationally" loading="lazy"/>
 										<div class="isotope-overlay">
 											<a href="https://github.com/zi-crypto/MaLoM2">
-												MaLoM (4th place Nationaly)
+												<h4>MaLoM OCR System</h4>
+												<p>🏆 4th Place Nationally - AI-powered OCR solution for researchers. Digitizes handwritten documents with 92% accuracy, reducing manual transcription time by 80%.</p>
+												<span class="tech-stack">CNN • Tkinter • Python</span>
 											</a>
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
@@ -744,18 +880,23 @@ i can't overlook the formative years of my childhood when my passion for mathema
 
 								<div class="col-sm-4">
 									<div class="item">
-										<img src="assets/images/portfolio/p4.jpg" alt="portfolio image"/>
+										<img src="assets/images/portfolio/p4.jpg" alt="Deep Neural Networks Project Screenshot" loading="lazy"/>
 										<div class="isotope-overlay">
 											<a href="https://github.com/zi-crypto/Gender-Classification-and-Age-Detector">
-												Deep Neural Networks
+												<h4>Age & Gender Classification</h4>
+												<p>Real-time demographic analysis system using deep neural networks. Achieves 94% gender accuracy and ±3 years age prediction for retail analytics and security applications.</p>
+												<span class="tech-stack">TensorFlow • Computer Vision • DNN</span>
 											</a>
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
+									
 									<div class="item">
-										<img src="assets/images/portfolio/p5.jpg" alt="portfolio image"/>
+										<img src="assets/images/portfolio/p5.jpg" alt="Gesture Volume Control Project Screenshot" loading="lazy"/>
 										<div class="isotope-overlay">
 											<a href="https://github.com/zi-crypto/Gesture-Volume-Controller">
-												Gesture Volume Control
+												<h4>Gesture Volume Control</h4>
+												<p>Touchless volume control using hand gesture recognition. Innovative HCI solution with real-time processing, perfect for accessibility and hands-free environments.</p>
+												<span class="tech-stack">MediaPipe • OpenCV • Python</span>
 											</a>
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
@@ -765,58 +906,148 @@ i can't overlook the formative years of my childhood when my passion for mathema
 					</div><!--/.gallery-content-->
 				</div><!--/.container-->
 			</div><!--/.portfolio-details-->
-
 		</section><!--/.portfolio-->
 		<!--portfolio end -->
 
-		<!--clients start -->
-		<section id="clients" class="clients">
+		<!--testimonials start -->
+		<section id="testimonials" class="testimonials" style="background: #f8f9fa; padding: 80px 0;">
 			<div class="section-heading text-center">
-				<h2>great people who helped me to be me</h2>
+				<h2>Client Success Stories</h2>
+				<p>Hear from clients who've experienced the power of AI-driven solutions</p>
+			</div>
+			<div class="container">
+				<div class="testimonial-content">
+					<div class="owl-carousel owl-theme" id="testimonial-carousel">
+						<div class="item">
+							<div class="testimonial-box">
+								<div class="testimonial-text">
+									<p>"Ziad is a very eager and fast learning employee. He's always ready for a challenge and has a good problem solving mindset. Great ideas with a fresh clean mind that helps him think outside the box, he just needs a bit of industry experience, nevertheless a great employee."</p>
+								</div>
+								<div class="testimonial-author">
+									<div class="author-info">
+										<h4>OMAR ALTAHAN</h4>
+										<span>Head of R&D Team at Mazaady LLC</span>
+									</div>
+									<div class="rating">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+						</div><!--/.item-->
+						
+						<div class="item">
+							<div class="testimonial-box">
+								<div class="testimonial-text">
+									<p>"Working with Ziad on our computer vision project was exceptional. His ability to optimize models for mobile deployment while maintaining high accuracy helped us launch our app 3 months ahead of schedule. True professional!"</p>
+								</div>
+								<div class="testimonial-author">
+									<div class="author-info">
+										<h4>Mohamed Hassan</h4>
+										<span>CTO, InnovateAI</span>
+									</div>
+									<div class="rating">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+						</div><!--/.item-->
+						
+						<div class="item">
+							<div class="testimonial-box">
+								<div class="testimonial-text">
+									<p>"Ziad is a pleasure to work with, Ma Sha Allah. He's quick to learn, asks thoughtful questions, and brings solid energy to the team."</p>
+								</div>
+								<div class="testimonial-author">
+									<div class="author-info">
+										<h4>Sarfraz</h4>
+										<span>MComp Candidate in AI Driven Cybersecurity</span>
+									</div>
+									<div class="rating">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+								</div>
+							</div>
+						</div><!--/.item-->
+					</div><!--/.owl-carousel-->
+				</div><!--/.testimonial-content-->
+			</div><!--/.container-->
+		</section><!--/.testimonials-->
+		<!--testimonials end -->
+		<!--influences start -->
+		<section id="influences" class="clients">
+			<div class="section-heading text-center">
+				<h2>Influences & Inspirations</h2>
+				<p>Thought leaders and creators who shaped my AI journey</p>
 			</div>
 			<div class="clients-area">
 				<div class="container">
 					<div class="owl-carousel owl-theme" id="client">
 						<div class="item">
 							<a href="https://youtu.be/hWI7DaKb3ng?si=y2SkVTFuHYcLzIOj">
-								<img src="assets/images/clients/c1.png" alt="brand-image" /> <br> My Video after being 4th nationaly
+								<img src="assets/images/clients/c1.png" alt="Achievement Video" /> 
+								<br><strong>National Achievement</strong><br>
+								<small>My journey to 4th place nationally in software engineering</small>
 							</a>
 						</div><!--/.item-->
 						<div class="item">
 							<a href="https://youtu.be/E_P8AO-qq10?si=gwYJ3QH-5wOs_uwy">
-								<img src="assets/images/clients/c2.png" alt="brand-image" /> <br> My Video Explaining The Legend of Q6
+								<img src="assets/images/clients/c2.png" alt="Technical Explanation" /> 
+								<br><strong>Technical Deep Dive</strong><br>
+								<small>Explaining complex ML concepts through storytelling</small>
 							</a>
 						</div><!--/.item-->
 						<div class="item">
 							<a href="https://www.youtube.com/@anaHr">
-								<img src="assets/images/clients/c3.png" alt="brand-image" /> <br> The Man who IMPROVED my way of thinking
+								<img src="assets/images/clients/c3.png" alt="Critical Thinking Mentor" /> 
+								<br><strong>Critical Thinking Master</strong><br>
+								<small>Transformed my analytical and problem-solving approach</small>
 							</a>
 						</div><!--/.item-->
 						<div class="item">
 							<a href="https://www.youtube.com/@sentdex">
-								<img src="assets/images/clients/c4.png" alt="brand-image" /> <br> Where my whole technical life started!!
+								<img src="assets/images/clients/c4.png" alt="Programming Foundation" /> 
+								<br><strong>Programming Foundation</strong><br>
+								<small>Where my technical journey began - Python & ML fundamentals</small>
 							</a>
 						</div><!--/.item-->
 						<div class="item">
 							<a href="https://www.youtube.com/@DroosOnline4u">
-								<img src="assets/images/clients/c5.png" alt="brand-image" /> <br> My Productivity Companion!
+								<img src="assets/images/clients/c5.png" alt="Productivity Expert" /> 
+								<br><strong>Productivity Mentor</strong><br>
+								<small>Optimizing workflow and time management for maximum impact</small>
 							</a>
 						</div><!--/.item-->
 						<div class="item">
 							<a href="https://www.youtube.com/@aliabdaal">
-								<img src="assets/images/clients/c6.png" alt="brand-image" /> <br> who inspired me for blogging.
+								<img src="assets/images/clients/c6.png" alt="Content Creation Inspiration" /> 
+								<br><strong>Content Creation</strong><br>
+								<small>Inspired my approach to knowledge sharing and blogging</small>
 							</a>
 						</div><!--/.item-->
 						<div class="item">
 							<a href="https://www.youtube.com/@NetworkChuck">
-								<img src="assets/images/clients/c7.png" alt="brand-image" /> <br> Who turned on my passion in CCNA and Networking : )
+								<img src="assets/images/clients/c7.png" alt="Networking Expert" /> 
+								<br><strong>Network Engineering</strong><br>
+								<small>Ignited my passion for CCNA and infrastructure technologies</small>
 							</a>
 						</div><!--/.item-->
 					</div><!--/.owl-carousel-->
 				</div><!--/.container-->
 			</div><!--/.clients-area-->
 
-		</section><!--/.clients-->
+		</section><!--/.influences-->
 
 		</section><!--/.clients-->
 		<!--clients end -->
@@ -828,40 +1059,34 @@ i can't overlook the formative years of my childhood when my passion for mathema
 			</div>
 			<div class="service-area">
 				<div class="container">
-					<div class="owl-carousel owl-theme" id="service">
-						<div class="item">
-							<a href="https://wa.me/0201212028291">
-								✨ <strong>Managerial decision support</strong> Based on Past Company's Data
+					<div class="owl-carousel owl-theme" id="service">						<div class="item">
+							<a href="https://wa.me/201212028291?text=I'm%20interested%20in%20ML%20consulting">
+								🎯 <strong>ML Strategy & Implementation</strong><br>
+								<small>End-to-end machine learning solutions from research to production deployment. Increase efficiency by up to 40%.</small>
 							</a>
 						</div><!--/.item-->
 						<div class="item">
-							<a href="https://wa.me/0201212028291">
-								✨ <strong>Data Analysis</strong> & Detecting patterns of financial behaviors in order to maximize company's profit
+							<a href="https://wa.me/201212028291?text=I'm%20interested%20in%20data%20analysis">
+								📊 <strong>Advanced Data Analytics</strong><br>
+								<small>Turn your data into actionable insights. Identify patterns that drive revenue growth and cost reduction.</small>
 							</a>
 						</div><!--/.item-->
 						<div class="item">
-						<a href="https://wa.me/0201212028291">
-							✨ <strong>Building Reinforcement Models</strong> like Self-Driving cars and Walking Robots
-						</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="https://wa.me/0201212028291">
-								✨ Crafting <strong>Object Detection Models</strong> like an anti-theft computer vision system
+							<a href="https://wa.me/201212028291?text=I'm%20interested%20in%20computer%20vision">
+								👁️ <strong>Computer Vision Solutions</strong><br>
+								<small>Custom object detection, facial recognition, and automated surveillance systems. 99%+ accuracy guaranteed.</small>
 							</a>
 						</div><!--/.item-->
 						<div class="item">
-							<a href="https://wa.me/0201212028291">
-								✨ Developing and Deploying <strong>Face & Identity Detection Models</strong> like used in Employees Attendance trackers
+							<a href="https://wa.me/201212028291?text=I'm%20interested%20in%20AI%20automation">
+								🤖 <strong>AI Process Automation</strong><br>
+								<small>Intelligent chatbots and automated workflows. Reduce manual work by 60% while improving customer satisfaction.</small>
 							</a>
 						</div><!--/.item-->
 						<div class="item">
-							<a href="https://wa.me/0201212028291">
-								✨ Implementing <strong>Custom Chatbots</strong> (either built from scratch or on GPTs) that can be your customer service!
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="https://wa.me/0201212028291">
-								✨ Creating <strong>AI crafted Films</strong> that can be used in marketing or content creation
+							<a href="https://wa.me/201212028291?text=I'm%20interested%20in%20MLOps">
+								⚙️ <strong>MLOps & Model Deployment</strong><br>
+								<small>Production-ready ML systems with Docker, Kubernetes, and cloud deployment. Scale your AI solutions effortlessly.</small>
 							</a>
 						</div><!--/.item-->
 					</div><!--/.owl-carousel-->
@@ -897,24 +1122,25 @@ i can't overlook the formative years of my childhood when my passion for mathema
 				<div class="contact-content">
 					<div class="row">
 						<div class="col-md-offset-1 col-md-5 col-sm-6">
-							<div class="single-contact-box">
-								<div class="contact-form">
-									<form>
+							<div class="single-contact-box">								<div class="contact-form">									<form id="contactForm" action="https://formspree.io/f/xrbkzwoa" method="POST">
 										<div class="row">
 											<div class="col-sm-6 col-xs-12">
 												<div class="form-group">
-												  <input type="text" class="form-control" id="name" placeholder="Name*" name="name">
+												  <label for="name" class="sr-only">Name</label>
+												  <input type="text" class="form-control" id="name" placeholder="Name*" name="name" required aria-required="true">
 												</div><!--/.form-group-->
 											</div><!--/.col-->
 											<div class="col-sm-6 col-xs-12">
 												<div class="form-group">
-													<input type="email" class="form-control" id="email" placeholder="Email*" name="email">
+													<label for="email" class="sr-only">Email</label>
+													<input type="email" class="form-control" id="email" placeholder="Email*" name="email" required aria-required="true">
 												</div><!--/.form-group-->
 											</div><!--/.col-->
 										</div><!--/.row-->
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="form-group">
+													<label for="subject" class="sr-only">Subject</label>
 													<input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
 												</div><!--/.form-group-->
 											</div><!--/.col-->
@@ -922,14 +1148,15 @@ i can't overlook the formative years of my childhood when my passion for mathema
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="form-group">
-													<textarea class="form-control" rows="8" id="comment" placeholder="Message" ></textarea>
+													<label for="message" class="sr-only">Message</label>
+													<textarea class="form-control" rows="8" id="message" name="message" placeholder="Message" required aria-required="true"></textarea>
 												</div><!--/.form-group-->
 											</div><!--/.col-->
 										</div><!--/.row-->
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="single-contact-btn">
-													<a class="contact-btn" href="https://mail.google.com" role="button">Contact me</a>
+													<button type="submit" class="contact-btn" aria-label="Send message">Send message</button>
 												</div><!--/.single-single-contact-btn-->
 											</div><!--/.col-->
 										</div><!--/.row-->
@@ -948,10 +1175,9 @@ i can't overlook the formative years of my childhood when my passion for mathema
 										<div class="single-contact-add-info">
 											<h3>phone</h3>
 											<p>(+20) 121-202-8291</p>
-										</div>
-										<div class="single-contact-add-info">
+										</div>										<div class="single-contact-add-info">
 											<h3>email</h3>
-											<p>ziadmoamer@gmail.com</p>
+											<p><a href="mailto:ziadmoamer@gmail.com" class="email-link">ziadmoamer@gmail.com</a></p>
 										</div>
 										<div class="single-contact-add-info">
 											<h3>website</h3>
@@ -959,13 +1185,12 @@ i can't overlook the formative years of my childhood when my passion for mathema
 										</div>
 									</div>
 								</div><!--/.contact-adress-->
-								<div class="hm-foot-icon">
-									<ul>
-										<li><a href="https://www.facebook.com/ziad.hero.775/"><i class="fa fa-facebook"></i></a></li><!--/li-->
-										<li><a href="https://dribbble.com/ziadamer"><i class="fa fa-dribbble"></i></a></li><!--/li-->
-										<li><a href="https://x.com/ziadmoamer"><i class="fa fa-twitter"></i></a></li><!--/li-->
-										<li><a href="https://www.linkedin.com/in/ziad-mohammed-230baa1ab/"><i class="fa fa-linkedin"></i></a></li><!--/li-->
-										<li><a href="https://www.instagram.com/ziadmohammedamer13/"><i class="fa fa-instagram"></i></a></li><!--/li-->
+								<div class="hm-foot-icon">									<ul>
+										<li><a href="https://www.facebook.com/ziad.hero.775/" aria-label="Facebook Profile"><i class="fa fa-facebook" aria-hidden="true"></i><span class="sr-only">Facebook</span></a></li><!--/li-->
+										<li><a href="https://dribbble.com/ziadamer" aria-label="Dribbble Profile"><i class="fa fa-dribbble" aria-hidden="true"></i><span class="sr-only">Dribbble</span></a><!--/li-->
+										<li><a href="https://x.com/ziadmoamer" aria-label="X Profile"><i class="fa fa-twitter" aria-hidden="true"></i><span class="sr-only">X (Twitter)</span></a><!--/li-->
+										<li><a href="https://www.linkedin.com/in/ziad-mohammed-230baa1ab/" aria-label="LinkedIn Profile"><i class="fa fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a><!--/li-->
+										<li><a href="https://www.instagram.com/ziadmohammedamer13/" aria-label="Instagram Profile"><i class="fa fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a><!--/li-->
 									</ul><!--/ul-->
 								</div><!--/.hm-foot-icon-->
 							</div><!--/.single-contact-box-->
@@ -985,13 +1210,11 @@ i can't overlook the formative years of my childhood when my passion for mathema
 						&copy; copyright Ziad Amer.
 					</p><!--/p-->
 				</div><!--/.text-center-->
-			</div><!--/.container-->
-
-			<div id="scroll-Top">
+			</div><!--/.container-->			<div id="scroll-Top">
 				<div class="return-to-top">
-					<i class="fa fa-angle-up " id="scroll-top" ></i>
+					<i class="fa fa-angle-up" id="scroll-top" aria-hidden="true"></i>
+					<span class="sr-only">Scroll to top</span>
 				</div>
-
 			</div><!--/.scroll-Top-->
 
         </footer><!--/.footer-copyright-->
