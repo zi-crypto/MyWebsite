@@ -65,17 +65,6 @@ body {
   padding-bottom: 15px;
 }
 
-.section-heading h2:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background: #5db85c;
-}
-
 /* Improved links for accessibility */
 a:focus {
   outline: 2px solid #5db85c;
@@ -343,7 +332,6 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
     font-size: 16px;
     color: #999fb3;
     padding: 35px 0 43px;
-    border-bottom: 1px solid #999fb3;
 }
 .single-about-add-info {
     margin: 35px 0;
@@ -468,7 +456,6 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     font-weight: 600;
     text-transform: uppercase;
     padding-bottom: 50px;
-    border-bottom: 1px solid #e5ebf2;
 }
 .single-progress-txt {
     display: flex;
@@ -607,80 +594,241 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 .experience-time-responsive{display: none;}
 /*-------------------------------------
-        8. Profiles
+        8. Profiles - COMPLETELY REBUILT
 --------------------------------------*/
 .profiles {
-    padding:  50px 0 100px;
-    border:  1px solid #e5ebf2;
+    padding: 50px 0 100px;
+    border: 1px solid #e5ebf2;
 }
 
-.profiles-content {padding-top: 100px;}
-.profiles-content .col-sm-3{padding:0;}
-.profile-txt {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.profiles-content {
+    padding-top: 100px;
 }
+
+.profiles-content .col-sm-6 {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Profile Link Container - No Animations */
+.profile-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-link:hover, 
+.profile-link:focus, 
+.profile-link:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Profile Card - Clean Static Design */
 .single-profile {
-    position: relative;
-    height: 150px;
+    /* Basic Properties */
+    width: 100%;
+    height: 220px;
+    background: #fff;
+    border: 2px solid #e5ebf2;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    margin: 0 auto;
+    padding: 20px;
+    
+    /* Layout */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-right: 1px solid #b2c1ce;
-    overflow:hidden;
-    -webkit-transition:background 0.5s linear; 
-    -moz-transition:background 0.5s linear; 
-    -ms-transition:background 0.5s linear; 
-    -o-transition:background 0.5s linear; 
-    transition:background 0.5s linear;
+    text-align: center;
+    
+    /* Force Static Positioning - No Movement */
+    position: relative;
+    box-sizing: border-box;
+    
+    /* Zero Animation Properties */
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    transform: none;
+    animation: none;
+    will-change: auto;
 }
-.profile-icon-name {
-    text-transform: capitalize;
-    color: #636a82;
-    font-size: 16px;
+
+/* Hover State - Simple Color Change Only */
+.single-profile:hover {
+    background: #8B5CF6;
+    border-color: #8B5CF6;
+    /* Maintain exact same dimensions and position */
+    width: 100%;
+    height: 220px;
+    transform: none;
+    position: relative;
 }
-.single-profile.profile-no-border{border-right:transparent;}
-.profile-border {
-    border-bottom: 1px solid #b2c1ce;
-}
-.single-profile-overlay{
-    display:flex;
-    align-items:center;
-    text-transform: capitalize;
-    justify-content:center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: " ";
-    width:100%;
+
+/* Profile Content Layout */
+.profile-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     height: 100%;
-    background: #d92cf9;
-    background: -moz-linear-gradient(left, #d92cf9 0%, #b636ff 100%);
-    background: -webkit-linear-gradient(left, #d92cf9 0%,#b636ff 100%);
-    background: linear-gradient(to right, #d92cf9 0%,#b636ff 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d92cf9', endColorstr='#b636ff',GradientType=1 );
-    -webkit-transform:scale(0);
-    -moz-transform:scale(0);
-    -ms-transform:scale(0);
-    -o-transform:scale(0);
-    transform:scale(0);
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    -ms-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s;
 }
-.single-profile:hover .single-profile-overlay{
-    -webkit-transform:scale(1);
-    -moz-transform:scale(1);
-    -ms-transform:scale(1);
-    -o-transform:scale(1);
-    transform:scale(1);
-    top:0;
+
+.profile-txt i {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #636a82;
+    transition: color 0.2s ease;
+    display: block;
 }
-.single-profile:hover .profile-icon-name,.single-profile:hover .profile-txt a>i{color: #fff;}
-.single-profile:hover .profile-border {border:transparent;}
+
+/* Icon hover state */
+.single-profile:hover .profile-txt i {
+    color: #fff;
+}
+
+/* Profile name styling */
+.profile-icon-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #636a82;
+    text-transform: capitalize;
+    transition: color 0.2s ease;
+    margin: 0;
+    padding: 0;
+}
+
+.single-profile:hover .profile-icon-name {
+    color: #fff;
+}
+
+/* CUSTOM KAGGLE ICON (K) STYLING */
+.kaggle-custom-icon {
+    font-size: 48px !important;
+    width: 48px !important;
+    height: 48px !important;
+    line-height: 48px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    text-align: center !important;
+    margin-bottom: 15px !important;
+    color: #636a82 !important;
+    transition: color 0.2s ease !important;
+    font-weight: bold !important;
+    font-style: normal !important;
+    font-family: 'Arial', sans-serif !important;
+}
+
+/* HUGGING FACE LOGO ICON STYLING */
+.huggingface-logo-icon {
+    width: 48px !important;
+    height: 48px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    margin-bottom: 15px !important;
+    transition: filter 0.2s ease !important;
+    object-fit: contain !important;
+}
+
+/* CUSTOM HUGGING FACE ICON (🤗) STYLING */
+.huggingface-custom-icon {
+    font-size: 48px !important;
+    width: 48px !important;
+    height: 48px !important;
+    line-height: 48px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    text-align: center !important;
+    margin-bottom: 15px !important;
+    color: #636a82 !important;
+    transition: color 0.2s ease !important;
+    font-style: normal !important;
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif !important;
+}
+
+/* HOVER EFFECTS FOR CUSTOM ICONS */
+.single-profile:hover .kaggle-custom-icon,
+.single-profile:hover .huggingface-custom-icon {
+    color: #fff !important;
+}
+
+/* GITHUB HOVER FIX - Nuclear override for all possible selectors */
+body .single-profile:hover .profile-txt i.flaticon-github-logo,
+html .single-profile:hover .profile-txt i.flaticon-github-logo,
+.single-profile:hover .profile-txt i.flaticon-github-logo,
+body .single-profile:hover .profile-txt .flaticon-github-logo,
+html .single-profile:hover .profile-txt .flaticon-github-logo,
+.single-profile:hover .profile-txt .flaticon-github-logo {
+    color: #fff !important;
+}
+
+/* GITHUB HOVER FIX - For pseudo-elements */
+body .single-profile:hover .profile-txt i.flaticon-github-logo:before,
+html .single-profile:hover .profile-txt i.flaticon-github-logo:before,
+.single-profile:hover .profile-txt i.flaticon-github-logo:before,
+body .single-profile:hover .profile-txt .flaticon-github-logo:before,
+html .single-profile:hover .profile-txt .flaticon-github-logo:before,
+.single-profile:hover .profile-txt .flaticon-github-logo:before {
+    color: #fff !important;
+}
+
+/* ADDITIONAL REINFORCEMENT: Remove any inherited italic/oblique styles */
+.kaggle-custom-icon,
+.huggingface-custom-icon,
+.profile-txt .kaggle-custom-icon,
+.profile-txt .huggingface-custom-icon,
+.single-profile .kaggle-custom-icon,
+.single-profile .huggingface-custom-icon {
+    font-style: normal !important;
+    text-decoration: none !important;
+    font-variant: normal !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+}
+
+/* UNIVERSAL ICON HOVER - Ensure all profile icons turn white on hover */
+.single-profile:hover .profile-txt i,
+.single-profile:hover .profile-txt .kaggle-custom-icon,
+.single-profile:hover .profile-txt .huggingface-custom-icon,
+.single-profile:hover .profile-txt .flaticon-github-logo,
+.single-profile:hover .profile-txt .fa-gitlab {
+    color: #fff !important;
+}
+
+/* GITLAB HOVER FIX - Nuclear override for all possible selectors */
+body .single-profile:hover .profile-txt i.fa-gitlab,
+html .single-profile:hover .profile-txt i.fa-gitlab,
+.single-profile:hover .profile-txt i.fa-gitlab,
+body .single-profile:hover .profile-txt .fa-gitlab,
+html .single-profile:hover .profile-txt .fa-gitlab,
+.single-profile:hover .profile-txt .fa-gitlab {
+    color: #fff !important;
+}
+
+/* GITLAB HOVER FIX - For pseudo-elements */
+body .single-profile:hover .profile-txt i.fa-gitlab:before,
+html .single-profile:hover .profile-txt i.fa-gitlab:before,
+.single-profile:hover .profile-txt i.fa-gitlab:before,
+body .single-profile:hover .profile-txt .fa-gitlab:before,
+html .single-profile:hover .profile-txt .fa-gitlab:before,
+.single-profile:hover .profile-txt .fa-gitlab:before {
+    color: #fff !important;
+}
+
+/* ULTIMATE NUCLEAR HOVER OVERRIDE - All profile icons */
+body .single-profile:hover .profile-txt i,
+html .single-profile:hover .profile-txt i,
+.profiles .single-profile:hover .profile-txt i,
+#profiles .single-profile:hover .profile-txt i {
+    color: #fff !important;
+}
+
 /*-------------------------------------
         9. Portfolio
 --------------------------------------*/
@@ -748,6 +896,36 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     font-size: 14px;
     text-align: center;
 }
+
+/* Portfolio overlay text elements - ensure white color */
+.isotope-overlay a h4,
+.isotope-overlay a p,
+.isotope-overlay a span,
+.isotope-overlay a .tech-stack {
+    color: #fff !important;
+    margin-bottom: 10px;
+}
+
+.isotope-overlay a h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.isotope-overlay a p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.isotope-overlay a .tech-stack {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
 .isotope .item:hover .isotope-overlay{
     -webkit-transform:scale(1);
     -moz-transform:scale(1);
@@ -1045,7 +1223,6 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
   color: inherit;
   text-decoration: none;
   transition: color 0.3s ease;
-  border-bottom: 1px dotted #b636ff;
 }
 
 .email-link:hover,
@@ -1327,10 +1504,11 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 /* Hero Section Enhancements */
 .hero-cta {
-  margin-top: 30px;
+  margin-top: 5px;
   display: flex;
   gap: 20px;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -1345,33 +1523,255 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  font-size: 14px;
+  line-height: 1;
+  min-height: 48px;
+  white-space: nowrap;
+  min-width: 180px;
+  text-align: center;
 }
 
 .resume-download-btn {
-  background: #1ABB9C;
+  background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
   color: #fff;
-  border: 2px solid #1ABB9C;
+  border: 2px solid #8B5CF6;
+  /* Individual positioning for Download Resume button */
+  margin-top: -10px;
 }
 
 .resume-download-btn:hover {
   background: transparent;
-  color: #1ABB9C;
+  color: #8B5CF6;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(26, 187, 156, 0.4);
+  box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
 }
 
 .contact-btn-hero {
   background: transparent;
-  color: #1ABB9C;
-  border: 2px solid #1ABB9C;
+  color: #8B5CF6;
+  border: 2px solid #8B5CF6;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  /* Keep Let's Talk button in its current position */
+  margin-top: 20px;
 }
 
-.contact-btn-hero:hover {
-  background: #1ABB9C;
+.contact-btn-hero:hover,
+.contact-btn-hero:focus {
+  background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(26, 187, 156, 0.4);
+  box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+  outline: none;
+}
+
+/* Dropdown functionality for Let's Talk button */
+.lets-talk-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 220px;
+  box-shadow: 0px 8px 20px 0px rgba(139, 92, 246, 0.15);
+  border-radius: 12px;
+  z-index: 1000;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  border: none;
+  overflow: hidden;
+  padding: 0;
+  max-width: 220px;
+  width: 220px;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 15px 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.2;
+  gap: 12px;
+  background-color: #ffffff;
+  position: relative;
+  border: none;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #8B5CF6 !important;
+  color: #fff !important;
+  transform: translateX(3px);
+  border-bottom: 1px solid #8B5CF6 !important;
+  border-color: #8B5CF6 !important;
+}
+
+.dropdown-content a:hover:last-child {
+  border-bottom: none !important;
+}
+
+.dropdown-content a:focus {
+  background-color: #8B5CF6 !important;
+  color: #fff !important;
+  outline: none;
+  border-bottom: 1px solid #8B5CF6 !important;
+  border-color: #8B5CF6 !important;
+}
+
+.dropdown-content a:focus:last-child {
+  border-bottom: none !important;
+}
+
+.dropdown-content a:active {
+  background-color: #7C3AED !important;
+  color: #fff !important;
+  border-bottom: 1px solid #7C3AED !important;
+  border-color: #7C3AED !important;
+}
+
+.dropdown-content a:active:last-child {
+  border-bottom: none;
+}
+
+/* Ensure smooth transitions for all states */
+.dropdown-content a * {
+  transition: inherit;
+}
+
+.dropdown-content a:first-child {
+  border-top: none;
+}
+
+.lets-talk-dropdown.show .dropdown-content {
+  display: block;
+  animation: dropdownFadeIn 0.3s ease;
+}
+
+@keyframes dropdownFadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateX(-50%) translateY(-10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(-50%) translateY(0); 
+  }
+}
+
+/* Improved Influencers Section */
+.influence-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  margin: 10px;
+  height: 300px;
+}
+
+.influence-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.influence-card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.influence-card img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.influence-card:hover img {
+  transform: scale(1.05);
+}
+
+.influence-content {
+  padding: 20px;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.influence-content h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1ABB9C;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.influence-content p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Services Section Improvements */
+.services .item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  margin: 10px;
+  padding: 30px 20px;
+  text-align: center;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services .item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.services .item a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.services .item a:hover {
+  color: #1ABB9C;
 }
 
 /* Responsive Design for New Sections */
@@ -1395,9 +1795,243 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     gap: 15px;
     text-align: center;
   }
-  
-  .hero-cta {
+    .hero-cta {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
   }
+
+  .resume-download-btn,
+  .contact-btn-hero {
+    min-width: 200px;
+    font-size: 13px;
+    padding: 10px 25px;
+  }
+  
+  /* Maintain button alignment on mobile */
+  .resume-download-btn {
+    margin-top: -10px !important;
+  }
+  
+  .contact-btn-hero {
+    margin-top: 20px !important;
+  }
+}
+
+/* Comprehensive responsive button alignment for all screen sizes */
+@media screen and (min-width: 1200px) {
+  .resume-download-btn {
+    margin-top: -10px !important;
+  }
+  
+  .contact-btn-hero {
+    margin-top: 20px !important;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .resume-download-btn {
+    margin-top: -10px !important;
+  }
+  
+  .contact-btn-hero {
+    margin-top: 20px !important;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  .resume-download-btn {
+    margin-top: -10px !important;
+  }
+  
+  .contact-btn-hero {
+    margin-top: 20px !important;
+  }
+}
+
+/* Additional fixes to eliminate white bar */
+.dropdown-content {
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.dropdown-content a i {
+  width: 18px;
+  text-align: center;
+  font-size: 16px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+/* Ensure no default link styling interferes */
+.dropdown-content a:link,
+.dropdown-content a:visited {
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover:link,
+.dropdown-content a:hover:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* EMERGENCY: Prevent owl carousel from affecting profiles section */
+#profiles *,
+#profiles .single-profile,
+#profiles .profile-link,
+.profiles .single-profile,
+.profiles .profile-link {
+    /* Disable ALL owl carousel related properties */
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    transform: none !important;
+    
+    /* Disable owl carousel animations */
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -ms-animation: none !important;
+    -o-animation: none !important;
+    animation: none !important;
+    
+    /* Disable owl carousel transitions */
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+    
+    /* Force static positioning */
+    position: static !important;
+    
+    /* Disable backface visibility */
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    
+    /* Disable any potential carousel properties */
+    float: none !important;
+    min-height: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: auto !important;
+}
+
+/* Additional emergency overrides for any potential owl carousel interference */
+#profiles .owl-item,
+#profiles .owl-stage,
+#profiles .owl-carousel,
+.profiles .owl-item,
+.profiles .owl-stage,
+.profiles .owl-carousel {
+    display: none !important;
+}
+
+/* Mobile responsive grid layout for profiles */
+@media screen and (max-width: 768px) {
+    #profiles .col-sm-6,
+    .profiles .col-sm-6 {
+        width: 100% !important;
+        float: none !important;
+        padding: 0 15px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    #profiles .single-profile,
+    .profiles .single-profile {
+        width: calc(100% - 30px) !important;
+        margin: 0 auto !important;
+    }
+}
+
+/* Desktop grid layout for profiles */
+@media screen and (min-width: 769px) {
+    #profiles .col-sm-6,
+    .profiles .col-sm-6 {
+        width: 50% !important;
+        float: left !important;
+        padding: 0 15px !important;
+    }
+    
+    #profiles .single-profile,
+    .profiles .single-profile {
+        width: calc(100% - 30px) !important;
+        margin: 15px auto !important;
+    }
+}
+
+/* EMERGENCY: Override Flaticon base font-size for GitHub logo */
+[class^="flaticon-github-logo"]:before,
+[class*=" flaticon-github-logo"]:before,
+.flaticon-github-logo:before,
+body .flaticon-github-logo:before,
+html .flaticon-github-logo:before {
+    font-size: 48px !important;
+}
+
+/* Additional override for the icon element itself */
+body .profile-txt .flaticon-github-logo,
+html .profile-txt .flaticon-github-logo,
+.profile-txt .flaticon-github-logo {
+    font-size: 48px !important;
+    line-height: 48px !important;
+}
+
+/* NUCLEAR: Force GitHub icon color inheritance on hover */
+.single-profile:hover .profile-txt i.flaticon-github-logo,
+.single-profile:hover .profile-txt i.flaticon-github-logo:before,
+.single-profile:hover .profile-txt i.flaticon-github-logo:after {
+    color: inherit !important;
+}
+
+/* NUCLEAR: Force ALL profile icons color inheritance on hover */
+.single-profile:hover .profile-txt i.fa-trophy,
+.single-profile:hover .profile-txt i.fa-trophy:before,
+.single-profile:hover .profile-txt i.fa-trophy:after,
+.single-profile:hover .profile-txt i.fa-rocket,
+.single-profile:hover .profile-txt i.fa-rocket:before,
+.single-profile:hover .profile-txt i.fa-rocket:after,
+.single-profile:hover .profile-txt i.fa-gitlab,
+.single-profile:hover .profile-txt i.fa-gitlab:before,
+.single-profile:hover .profile-txt i.fa-gitlab:after {
+    color: inherit !important;
+}
+
+/* Override FontAwesome base font-size for consistent sizing */
+[class^="fa-trophy"],
+[class*=" fa-trophy"],
+.fa-trophy,
+body .fa-trophy,
+html .fa-trophy,
+[class^="fa-rocket"],
+[class*=" fa-rocket"],
+.fa-rocket,
+body .fa-rocket,
+html .fa-rocket,
+[class^="fa-gitlab"],
+[class*=" fa-gitlab"],
+.fa-gitlab,
+body .fa-gitlab,
+html .fa-gitlab {
+    font-size: 48px !important;
+    line-height: 48px !important;
+}
+
+/* Additional override for FontAwesome :before pseudo-elements */
+.fa-trophy:before,
+.fa-rocket:before,
+.fa-gitlab:before,
+body .fa-trophy:before,
+body .fa-rocket:before,
+body .fa-gitlab:before,
+html .fa-trophy:before,
+html .fa-rocket:before,
+html .fa-gitlab:before {
+    font-size: 48px !important;
 }

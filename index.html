@@ -90,14 +90,12 @@
 			            <!-- Collect the nav links, forms, and other content for toggling -->
 			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 			                <li class=" smooth-menu active"></li>
-			                    <li class=" smooth-menu"><a href="#education">education</a></li>
-			                    <li class="smooth-menu"><a href="#skills">skills</a></li>
+			                    <li class=" smooth-menu"><a href="#education">education</a></li>			                    <li class="smooth-menu"><a href="#skills">skills</a></li>
 			                    <li class="smooth-menu"><a href="#certifications">certifications</a></li>
 			                    <li class="smooth-menu"><a href="#experience">experience</a></li>
 			                    <li class="smooth-menu"><a href="#profiles">profile</a></li>
 			                    <li class="smooth-menu"><a href="#portfolio">portfolio</a></li>
 					    <li class="smooth-menu"><a href="#services">services</a></li>
-					    <li class="smooth-menu"><a href="/blog">blog</a></li>
 			                    <!-- <li class="smooth-menu"><a href="#clients">clients</a></li> -->
 			                    <li class="smooth-menu"><a href="#contact">contact</a></li>
 			                </ul><!--/.nav -->
@@ -117,10 +115,15 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center">
-						<div class="header-text">							<h2>hi <span>,</span> i am <br> ziad <br> amer <span>.</span>   </h2>							<p>Machine Learning Specialist & AI Tutor | Transforming Ideas into Production-Ready AI Solutions</p>
-							<div class="hero-cta">
+						<div class="header-text">							<h2>hi <span>,</span> i am <br> ziad <br> amer <span>.</span>   </h2>							<p>Machine Learning Specialist & AI Tutor | Transforming Ideas into Production-Ready AI Solutions</p>							<div class="hero-cta">
 								<a href="assets/download/ZiadAmerResume.pdf" download target="_blank" class="resume-download-btn" aria-label="Download Ziad Amer's Resume"><i class="fa fa-download" aria-hidden="true"></i> Download Resume</a>
-								<a href="#contact" class="smooth-menu contact-btn-hero"><i class="fa fa-envelope" aria-hidden="true"></i> Let's Talk</a>
+								<div class="lets-talk-dropdown">
+									<button class="contact-btn-hero" id="letsTalkBtn"><i class="fa fa-envelope" aria-hidden="true"></i> Let's Talk</button>
+									<div class="dropdown-content" id="dropdownContent">
+										<a href="https://wa.me/201212028291?text=Hello%20Ziad,%20I%27d%20like%20to%20discuss%20a%20project" target="_blank"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+										<a href="#contact" class="smooth-menu"><i class="fa fa-envelope"></i> Email</a>
+									</div>
+								</div>
 							</div>
 						</div><!--/.header-text-->
 					</div><!--/.col-->
@@ -169,8 +172,7 @@ I am a Machine Learning Specialist and AI Tutor with 8+ years of programming exp
 									</div>
 								</div>
 								<br>
-								<p><strong>Mission:</strong> Transforming complex AI concepts into practical, scalable solutions that drive real business value.</p>
-								<div class="row">
+								<p><strong>Mission:</strong> Transforming complex AI concepts into practical, scalable solutions that drive real business value.</p>								<div class="row">
 									<div class="col-sm-4">
 										<div class="single-about-add-info">
 											<h3>phone</h3>
@@ -178,14 +180,9 @@ I am a Machine Learning Specialist and AI Tutor with 8+ years of programming exp
 										</div>
 									</div>
 									<div class="col-sm-4">
-										<div class="single-about-add-info">											<h3>email</h3>
-											<p>ziadmoamer@gmail.com</p>
-										</div>
-									</div>
-									<div class="col-sm-4">
 										<div class="single-about-add-info">
-											<h3>website</h3>
-											<p>ziadamer.com</p>
+											<h3>email</h3>
+											<p>ziadmoamer@gmail.com</p>
 										</div>
 									</div>
 								</div>
@@ -193,38 +190,13 @@ I am a Machine Learning Specialist and AI Tutor with 8+ years of programming exp
 						</div>
 						<div class="col-sm-offset-1 col-sm-5">
 							<div class="single-about-img">
-								<img src="assets/images/about/profile_image.jpg" alt="Ziad Amer - Machine Learning Specialist & AI Tutor" class="fill" loading="lazy">
-								<div class="about-list-icon">
+								<img src="assets/images/about/profile_image.jpg" alt="Ziad Amer - Machine Learning Specialist & AI Tutor" class="fill" loading="lazy">								<div class="about-list-icon">
 									<ul>
-										<li>
-											<a href="https://www.facebook.com/profile.php?id=61569362285805" target="_blank">
-												<i  class="fa fa-facebook" aria-hidden="true"></i>
-											</a>
-										</li><!-- / li -->
-										<li>
-											<a href="https://dribbble.com/ziadamer" target="_blank">
-												<i  class="fa fa-dribbble" aria-hidden="true"></i>
-											</a>
-
-										</li><!-- / li -->
-										<li>
-											<a href="https://x.com/ziadmoamer" target="_blank">
-												<i  class="fa fa-twitter" aria-hidden="true"></i>
-											</a>
-
-										</li><!-- / li -->
 										<li>
 											<a href="https://www.linkedin.com/in/ziad-amer-142423337/" target="_blank">
 												<i  class="fa fa-linkedin" aria-hidden="true"></i>
 											</a>
 										</li><!-- / li -->
-										<li>
-											<a href="https://www.instagram.com/ziadmohammedamer13/" target="_blank">
-												<i  class="fa fa-instagram" aria-hidden="true"></i>
-											</a>
-										</li><!-- / li -->
-
-
 									</ul><!-- / ul -->
 								</div><!-- /.about-list-icon -->
 
@@ -327,35 +299,37 @@ i can't overlook the formative years of my childhood when my passion for mathema
 						<h2>skills</h2>
 					</div>
 					<div class="container">
-						<div class="row">
-							<div class="col-md-6">
+						<div class="row">							<div class="col-md-6">
 								<div class="single-skill-content">
 									<div class="barWrapper">
-										<span class="progressText">machine learning</span>
-										<div class="single-progress-txt">											<div class="progress">
+										<span class="progressText">🤖 Machine Learning</span>
+										<div class="single-progress-txt">
+											<div class="progress">
 												<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100"></div>
 											</div>
 											<h3>90%</h3>
 										</div>
 									</div><!-- /.barWrapper -->
 									<div class="barWrapper">
-										<span class="progressText">deep learning</span>
-										<div class="single-progress-txt">											<div class="progress">
+										<span class="progressText">🧠 Deep Learning</span>
+										<div class="single-progress-txt">
+											<div class="progress">
 											   <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="10" aria-valuemax="100"></div>
 											</div>
 											<h3>85%</h3>
 										</div>
-									</div><!-- /.barWrapper -->									<div class="barWrapper">
-										<span class="progressText">Computer Vision & NLP</span>
+									</div><!-- /.barWrapper -->
+									<div class="barWrapper">
+										<span class="progressText">👁️ Computer Vision & NLP</span>
 										<div class="single-progress-txt">
 											<div class="progress">
 											   <div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="10" aria-valuemax="100"></div>
 											</div>
 											<h3>88%</h3>
 										</div>
-									</div><!-- /.barWrapper -->									
-									<div class="barWrapper">										
-										<span class="progressText">PyTorch & TensorFlow</span>
+									</div><!-- /.barWrapper -->
+									<div class="barWrapper">
+										<span class="progressText">🔥 PyTorch & TensorFlow</span>
 										<div class="single-progress-txt">
 											<div class="progress">
 											   <div class="progress-bar" role="progressbar" aria-valuenow="87" aria-valuemin="10" aria-valuemax="100"></div>
@@ -366,33 +340,36 @@ i can't overlook the formative years of my childhood when my passion for mathema
 								</div>
 							</div>
 							<div class="col-md-6">
-								<div class="single-skill-content">									<div class="barWrapper">										
-										<span class="progressText">MLOps & Cloud Deployment</span>
+								<div class="single-skill-content">
+									<div class="barWrapper">
+										<span class="progressText">☁️ MLOps & Cloud Deployment</span>
 										<div class="single-progress-txt">
 											<div class="progress">
 												<div class="progress-bar" role="progressbar" aria-valuenow="82" aria-valuemin="10" aria-valuemax="100"></div>
 											</div>
 											<h3>82%</h3>
 										</div>
-									</div><!-- /.barWrapper -->									
-									<div class="barWrapper">										
-										<span class="progressText">DevOps Engineering</span>
+									</div><!-- /.barWrapper -->
+									<div class="barWrapper">
+										<span class="progressText">⚙️ DevOps Engineering</span>
 										<div class="single-progress-txt">
 											<div class="progress">
 											   <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="10" aria-valuemax="100"></div>
 											</div>
 											<h3>75%</h3>
 										</div>
-									</div><!-- /.barWrapper -->									
-									<div class="barWrapper">										
-										<span class="progressText">Data Science & Analytics</span>
+									</div><!-- /.barWrapper -->
+									<div class="barWrapper">
+										<span class="progressText">📊 Data Science & Analytics</span>
 										<div class="single-progress-txt">
 											<div class="progress">
 											   <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="10" aria-valuemax="100"></div>
 											</div>
 											<h3>85%</h3>
 										</div>
-									</div><!-- /.barWrapper --><div class="barWrapper">										<span class="progressText">linux system engineering</span>
+									</div><!-- /.barWrapper -->
+									<div class="barWrapper">
+										<span class="progressText">🐧 Linux System Engineering</span>
 										<div class="single-progress-txt">
 											<div class="progress">
 											   <div class="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="10" aria-valuemax="100"></div>
@@ -705,124 +682,47 @@ i can't overlook the formative years of my childhood when my passion for mathema
 			<div class="profiles-details">
 				<div class="section-heading text-center">
 					<h2>profiles</h2>
-				</div>
-				<div class="container">
-					<div class="profiles-content">
+				</div>				<div class="container">					<div class="profiles-content">
 						<div class="row">
-							<div class="col-sm-3">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<a href="https://themeforest.net/user/ziadmoamer" traget="_blank"><i class="flaticon-themeforest"></i></a>
-										<div class="profile-icon-name">themeforest</div>
-									</div>
-									<div class="single-profile-overlay">
+							<div class="col-sm-6">
+								<a href="https://github.com/zi-crypto" target="_blank" class="profile-link">
+									<div class="single-profile">
 										<div class="profile-txt">
-											<a href="https://themeforest.net/user/ziadmoamer" traget="_blank"><i class="flaticon-themeforest"></i></a>
-											<div class="profile-icon-name">themeforest</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<a href="https://dribbble.com/ziadamer"><i class="flaticon-dribbble"></i></a>
-										<div class="profile-icon-name">dribbble</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<a href="https://dribbble.com/ziadamer"><i class="flaticon-dribbble"></i></a>
-											<div class="profile-icon-name">dribbble</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<a href="https://www.behance.net/ziadamer5"><i class="flaticon-behance-logo"></i></a>
-										<div class="profile-icon-name">behance</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<a href="https://www.behance.net/ziadamer5"><i class="flaticon-behance-logo"></i></a>
-											<div class="profile-icon-name">behance</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="single-profile profile-no-border">
-									<div class="profile-txt">
-										<a href="https://github.com/zi-crypto"><i class="flaticon-github-logo"></i></a>
-										<div class="profile-icon-name">github</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<a href="https://github.com/zi-crypto"><i class="flaticon-github-logo"></i></a>
+											<i class="flaticon-github-logo"></i>
 											<div class="profile-icon-name">github</div>
 										</div>
 									</div>
-								</div>
+								</a>
+							</div>
+							<div class="col-sm-6">
+								<a href="https://gitlab.com/Ziad.AI" target="_blank" class="profile-link">
+									<div class="single-profile profile-no-border">
+										<div class="profile-txt">
+											<i class="fa fa-gitlab"></i>
+											<div class="profile-icon-name">gitlab</div>
+										</div>
+									</div>
+								</a>
 							</div>
 						</div>
-						<div class="profile-border"></div>
-						<div class="row">
-							<div class="col-sm-3">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<a href="https://www.flickr.com/photos/201672893@N06/"><i class="flaticon-flickr-website-logo-silhouette"></i></a>
-										<div class="profile-icon-name">flickR</div>
-									</div>
-									<div class="single-profile-overlay">
+						<div class="row">							<div class="col-sm-6">
+								<a href="https://www.kaggle.com/ziad12" target="_blank" class="profile-link">
+									<div class="single-profile">
 										<div class="profile-txt">
-											<a href="https://www.flickr.com/photos/201672893@N06/"><i class="flaticon-flickr-website-logo-silhouette"></i></a>
-											<div class="profile-icon-name">flickR</div>
+											<i class="kaggle-custom-icon">k</i>
+											<div class="profile-icon-name">kaggle</div>
 										</div>
 									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<a href="https://ziadamer.smugmug.com/"><i class="flaticon-smug"></i></a>
-										<div class="profile-icon-name">smungMug</div>
-									</div>
-									<div class="single-profile-overlay">
+								</a>
+							</div>							<div class="col-sm-6">
+								<a href="https://huggingface.co/ziadamer" target="_blank" class="profile-link">
+									<div class="single-profile profile-no-border">
 										<div class="profile-txt">
-											<a href="https://ziadamer.smugmug.com/"><i class="flaticon-smug"></i></a>
-											<div class="profile-icon-name">smungMug</div>
+											<img src="assets/images/logos/hf-logo-pirate.svg" alt="Hugging Face" class="huggingface-logo-icon">
+											<div class="profile-icon-name">hugging face</div>
 										</div>
 									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="single-profile">
-									<div class="profile-txt">
-										<a href="https://octahedron-cone-29jd.squarespace.com/"><i class="flaticon-squarespace-logo"></i></a>
-										<div class="profile-icon-name">squareSpace</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<a href="https://octahedron-cone-29jd.squarespace.com/"><i class="flaticon-squarespace-logo"></i></a>
-											<div class="profile-icon-name">squareSpace</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="single-profile profile-no-border">
-									<div class="profile-txt">
-										<a href="https://bitbucket.org/ziadamer/workspace/overview/"><i class="flaticon-bitbucket-logotype-camera-lens-in-perspective"></i></a>
-										<div class="profile-icon-name">bitBucket</div>
-									</div>
-									<div class="single-profile-overlay">
-										<div class="profile-txt">
-											<a href="https://bitbucket.org/ziadamer/workspace/overview/"><i class="flaticon-bitbucket-logotype-camera-lens-in-perspective"></i></a>
-											<div class="profile-icon-name">bitBucket</div>
-										</div>
-									</div>
-								</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -942,12 +842,12 @@ i can't overlook the formative years of my childhood when my passion for mathema
 						<div class="item">
 							<div class="testimonial-box">
 								<div class="testimonial-text">
-									<p>"Working with Ziad on our computer vision project was exceptional. His ability to optimize models for mobile deployment while maintaining high accuracy helped us launch our app 3 months ahead of schedule. True professional!"</p>
+									<p>"Ziad is a first-year student, yet he demonstrates the knowledge, mindset, and skills of someone in their third or fourth year. His maturity and technical depth are truly impressive for his stage."</p>
 								</div>
 								<div class="testimonial-author">
 									<div class="author-info">
-										<h4>Mohamed Hassan</h4>
-										<span>CTO, InnovateAI</span>
+										<h4>Dr. Mohammad El-Ramly</h4>
+										<span>Lecturer at FCAI CAIRO</span><p><i>--Translated comprehensively from a written post in Arabic</i></p>
 									</div>
 									<div class="rating">
 										<i class="fa fa-star"></i>
@@ -982,113 +882,48 @@ i can't overlook the formative years of my childhood when my passion for mathema
 						</div><!--/.item-->
 					</div><!--/.owl-carousel-->
 				</div><!--/.testimonial-content-->
-			</div><!--/.container-->
-		</section><!--/.testimonials-->
+			</div><!--/.container-->		</section><!--/.testimonials-->
 		<!--testimonials end -->
-		<!--influences start -->
-		<section id="influences" class="clients">
-			<div class="section-heading text-center">
-				<h2>Influences & Inspirations</h2>
-				<p>Thought leaders and creators who shaped my AI journey</p>
-			</div>
-			<div class="clients-area">
-				<div class="container">
-					<div class="owl-carousel owl-theme" id="client">
-						<div class="item">
-							<a href="https://youtu.be/hWI7DaKb3ng?si=y2SkVTFuHYcLzIOj">
-								<img src="assets/images/clients/c1.png" alt="Achievement Video" /> 
-								<br><strong>National Achievement</strong><br>
-								<small>My journey to 4th place nationally in software engineering</small>
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="https://youtu.be/E_P8AO-qq10?si=gwYJ3QH-5wOs_uwy">
-								<img src="assets/images/clients/c2.png" alt="Technical Explanation" /> 
-								<br><strong>Technical Deep Dive</strong><br>
-								<small>Explaining complex ML concepts through storytelling</small>
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="https://www.youtube.com/@anaHr">
-								<img src="assets/images/clients/c3.png" alt="Critical Thinking Mentor" /> 
-								<br><strong>Critical Thinking Master</strong><br>
-								<small>Transformed my analytical and problem-solving approach</small>
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="https://www.youtube.com/@sentdex">
-								<img src="assets/images/clients/c4.png" alt="Programming Foundation" /> 
-								<br><strong>Programming Foundation</strong><br>
-								<small>Where my technical journey began - Python & ML fundamentals</small>
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="https://www.youtube.com/@DroosOnline4u">
-								<img src="assets/images/clients/c5.png" alt="Productivity Expert" /> 
-								<br><strong>Productivity Mentor</strong><br>
-								<small>Optimizing workflow and time management for maximum impact</small>
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="https://www.youtube.com/@aliabdaal">
-								<img src="assets/images/clients/c6.png" alt="Content Creation Inspiration" /> 
-								<br><strong>Content Creation</strong><br>
-								<small>Inspired my approach to knowledge sharing and blogging</small>
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="https://www.youtube.com/@NetworkChuck">
-								<img src="assets/images/clients/c7.png" alt="Networking Expert" /> 
-								<br><strong>Network Engineering</strong><br>
-								<small>Ignited my passion for CCNA and infrastructure technologies</small>
-							</a>
-						</div><!--/.item-->
-					</div><!--/.owl-carousel-->
-				</div><!--/.container-->
-			</div><!--/.clients-area-->
-
-		</section><!--/.influences-->
-
-		</section><!--/.clients-->
-		<!--clients end -->
-<br> <br> <br>
 		<!--services start-->
-		<section id="services" class="services">
+		<section id="services" class="services" style="margin-top: 80px; padding-top: 80px; position: relative; background: #f8f9fa;">
 			<div class="section-heading text-center">
-				<h2>Services</h2>
+				<h2 style="color: #333;">Services</h2>
+				<p style="color: #555;">Professional AI and machine learning solutions</p>
 			</div>
 			<div class="service-area">
 				<div class="container">
-					<div class="owl-carousel owl-theme" id="service">						<div class="item">
-							<a href="https://wa.me/201212028291?text=I'm%20interested%20in%20ML%20consulting">
-								🎯 <strong>ML Strategy & Implementation</strong><br>
-								<small>End-to-end machine learning solutions from research to production deployment. Increase efficiency by up to 40%.</small>
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="https://wa.me/201212028291?text=I'm%20interested%20in%20data%20analysis">
-								📊 <strong>Advanced Data Analytics</strong><br>
-								<small>Turn your data into actionable insights. Identify patterns that drive revenue growth and cost reduction.</small>
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="https://wa.me/201212028291?text=I'm%20interested%20in%20computer%20vision">
-								👁️ <strong>Computer Vision Solutions</strong><br>
-								<small>Custom object detection, facial recognition, and automated surveillance systems. 99%+ accuracy guaranteed.</small>
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="https://wa.me/201212028291?text=I'm%20interested%20in%20AI%20automation">
-								🤖 <strong>AI Process Automation</strong><br>
-								<small>Intelligent chatbots and automated workflows. Reduce manual work by 60% while improving customer satisfaction.</small>
-							</a>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="https://wa.me/201212028291?text=I'm%20interested%20in%20MLOps">
-								⚙️ <strong>MLOps & Model Deployment</strong><br>
-								<small>Production-ready ML systems with Docker, Kubernetes, and cloud deployment. Scale your AI solutions effortlessly.</small>
-							</a>
-						</div><!--/.item-->
+					<!-- Simple static grid with 3 larger services -->
+					<div class="row">
+						<div class="col-md-4 col-sm-12">
+							<div class="item" style="background: #fff; border: 2px solid #b636ff; box-shadow: 0 10px 20px rgba(0,0,0,0.1); padding: 40px 30px; margin: 15px auto; min-height: 320px; border-radius: 15px; text-align: center; transition: transform 0.3s ease;">
+								<a href="https://wa.me/201212028291?text=I'm%20interested%20in%20ML%20consulting" style="color: #333; text-decoration: none;">
+									<div style="font-size: 48px; margin-bottom: 20px;">🎯</div>
+									<strong style="display: block; font-size: 22px; margin-bottom: 15px; color: #333;">ML Strategy & Implementation</strong>
+									<small style="display: block; color: #555; font-size: 15px; line-height: 1.6;">End-to-end machine learning solutions from research to production deployment. Increase efficiency by up to 40% with AI-driven optimization.</small>
+								</a>
+							</div>
+						</div>
+						
+						<div class="col-md-4 col-sm-12">
+							<div class="item" style="background: #fff; border: 2px solid #b636ff; box-shadow: 0 10px 20px rgba(0,0,0,0.1); padding: 40px 30px; margin: 15px auto; min-height: 320px; border-radius: 15px; text-align: center; transition: transform 0.3s ease;">
+								<a href="https://wa.me/201212028291?text=I'm%20interested%20in%20data%20analysis" style="color: #333; text-decoration: none;">
+									<div style="font-size: 48px; margin-bottom: 20px;">📊</div>
+									<strong style="display: block; font-size: 22px; margin-bottom: 15px; color: #333;">Advanced Data Analytics</strong>
+									<small style="display: block; color: #555; font-size: 15px; line-height: 1.6;">Transform raw data into actionable business insights. Identify patterns and trends that drive revenue growth and operational efficiency.</small>
+								</a>
+							</div>
+						</div>
+						
+						<div class="col-md-4 col-sm-12">
+							<div class="item" style="background: #fff; border: 2px solid #b636ff; box-shadow: 0 10px 20px rgba(0,0,0,0.1); padding: 40px 30px; margin: 15px auto; min-height: 320px; border-radius: 15px; text-align: center; transition: transform 0.3s ease;">
+								<a href="https://wa.me/201212028291?text=I'm%20interested%20in%20computer%20vision" style="color: #333; text-decoration: none;">
+									<div style="font-size: 48px; margin-bottom: 20px;">👁️</div>
+									<strong style="display: block; font-size: 22px; margin-bottom: 15px; color: #333;">Computer Vision Solutions</strong>
+									<small style="display: block; color: #555; font-size: 15px; line-height: 1.6;">Custom object detection, facial recognition, and intelligent video analytics. High-accuracy systems for security and business applications.</small>
+								</a>
+							</div>
+						</div>
+					</div><!--/.row-->
 					</div><!--/.owl-carousel-->
 				</div><!--/.container-->
 			</div><!--/.clients-area-->
@@ -1179,18 +1014,11 @@ i can't overlook the formative years of my childhood when my passion for mathema
 											<h3>email</h3>
 											<p><a href="mailto:ziadmoamer@gmail.com" class="email-link">ziadmoamer@gmail.com</a></p>
 										</div>
-										<div class="single-contact-add-info">
-											<h3>website</h3>
-											<p>www.ziadamer.com</p>
-										</div>
 									</div>
-								</div><!--/.contact-adress-->
-								<div class="hm-foot-icon">									<ul>
-										<li><a href="https://www.facebook.com/ziad.hero.775/" aria-label="Facebook Profile"><i class="fa fa-facebook" aria-hidden="true"></i><span class="sr-only">Facebook</span></a></li><!--/li-->
-										<li><a href="https://dribbble.com/ziadamer" aria-label="Dribbble Profile"><i class="fa fa-dribbble" aria-hidden="true"></i><span class="sr-only">Dribbble</span></a><!--/li-->
-										<li><a href="https://x.com/ziadmoamer" aria-label="X Profile"><i class="fa fa-twitter" aria-hidden="true"></i><span class="sr-only">X (Twitter)</span></a><!--/li-->
-										<li><a href="https://www.linkedin.com/in/ziad-mohammed-230baa1ab/" aria-label="LinkedIn Profile"><i class="fa fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a><!--/li-->
-										<li><a href="https://www.instagram.com/ziadmohammedamer13/" aria-label="Instagram Profile"><i class="fa fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a><!--/li-->
+								</div><!--/.contact-adress-->								<div class="hm-foot-icon">									<ul>
+										<li><a href="https://www.linkedin.com/in/ziad-amer-142423337/" target="_blank" aria-label="LinkedIn Profile"><i class="fa fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a></li><!--/li-->
+										<li><a href="https://github.com/zi-crypto" target="_blank" aria-label="GitHub Profile"><i class="fa fa-github" aria-hidden="true"></i><span class="sr-only">GitHub</span></a></li><!--/li-->
+										<li><a href="https://wa.me/201212028291?text=Hello%20Ziad,%20I'd%20like%20to%20discuss%20a%20project" target="_blank" aria-label="WhatsApp Contact"><i class="fa fa-whatsapp" aria-hidden="true"></i><span class="sr-only">WhatsApp</span></a></li><!--/li-->
 									</ul><!--/ul-->
 								</div><!--/.hm-foot-icon-->
 							</div><!--/.single-contact-box-->

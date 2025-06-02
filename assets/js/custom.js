@@ -269,4 +269,71 @@ $(document).ready(function(){
 			});
 		}, 300);
 	});
+	// Dropdown functionality for Let's Talk button
+	$('#letsTalkBtn').on('click', function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$('.lets-talk-dropdown').toggleClass('show');
+	});
+
+	// Handle email click with smooth scroll to contact section
+	$('.dropdown-content a[href="#contact"]').on('click', function(e) {
+		e.preventDefault();
+		
+		// Close the dropdown first
+		$('.lets-talk-dropdown').removeClass('show');
+		
+		// Smooth scroll to contact section
+		$('html, body').animate({
+			scrollTop: $('#contact').offset().top - 80
+		}, 1000, 'easeInOutQuad');
+	});
+
+	// Close dropdown when clicking outside
+	$(document).on('click', function(e) {
+		if (!$(e.target).closest('.lets-talk-dropdown').length) {
+			$('.lets-talk-dropdown').removeClass('show');
+		}
+	});
+
+	// Close dropdown when pressing Escape key
+	$(document).on('keydown', function(e) {
+		if (e.key === 'Escape') {
+			$('.lets-talk-dropdown').removeClass('show');
+		}
+	});
+
+	// Configure influencers carousel with fewer items per view
+	$('#influences-carousel').owlCarousel({
+		items: 3,
+		loop: true,
+		margin: 30,
+		autoplay: true,
+		autoplayTimeout: 4000,
+		autoplayHoverPause: true,
+		nav: false,
+		dots: true,
+		responsive: {
+			0: { items: 1 },
+			768: { items: 2 },
+			992: { items: 3 }
+		}
+	});
+
+	// Configure services carousel with fewer items per view
+	$('#service').owlCarousel({
+		items: 2,
+		loop: true,
+		margin: 30,
+		autoplay: true,
+		autoplayTimeout: 5000,
+		autoplayHoverPause: true,
+		nav: false,
+		dots: true,
+		responsive: {
+			0: { items: 1 },
+			768: { items: 1 },
+			992: { items: 2 }
+		}
+	});
 });

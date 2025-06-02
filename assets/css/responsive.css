@@ -12,11 +12,26 @@
 	.welcome-hero {height: 768px;}
 
 	.timeline-content span>i, .experience-time span>i {left: -15.5%;}
+	
+	/* Maintain button alignment on large tablets and small desktops */
+	.resume-download-btn {
+		margin-top: -10px !important;
+	}
+	
+	.contact-btn-hero {
+		margin-top: 20px !important;
+	}
 }/*max-width:1199px*/
 
 @media screen and (max-width:1024px){
-
-
+	/* Maintain button alignment on tablets */
+	.resume-download-btn {
+		margin-top: -10px !important;
+	}
+	
+	.contact-btn-hero {
+		margin-top: 20px !important;
+	}
 }/*max-width:1024px*/
 
 @media screen and (max-width:1008px){
@@ -54,11 +69,19 @@
 
 	.isotope .item {max-width: 350px;margin: 0 auto 30px;}
 
-	.single-profile {max-width: 350px; margin: 30px auto;border: 0;}
+	.single-profile {max-width: 350px; margin: 30px auto; border: 2px solid #e5ebf2 !important;}
 	.profile-border{border: 0;}
 
 	.single-horizontal-timeline {max-width: 350px;margin: 30px auto;}
-
+	
+	/* Maintain button alignment on mobile and small tablets */
+	.resume-download-btn {
+		margin-top: -10px !important;
+	}
+	
+	.contact-btn-hero {
+		margin-top: 20px !important;
+	}
 }/*max-width:767px*/
 
 @media screen and (max-width: 660px){
@@ -94,6 +117,15 @@
 	/* Better portfolio display on mobile */
 	.isotope .item {margin-bottom: 25px;}
 	
+	/* Maintain button alignment on small mobile screens */
+	.resume-download-btn {
+		margin-top: -10px !important;
+	}
+	
+	.contact-btn-hero {
+		margin-top: 20px !important;
+	}
+	
 	/* Resume button responsive styling */
 	.header-text .resume-download-btn {
 		min-width: 180px !important;
@@ -108,7 +140,16 @@
 	.welcome-hero .header-text p { font-size: 16px; margin-bottom: 20px; }
 	.welcome-hero .header-text a { padding: 10px 20px; font-size: 14px; }
 	.education-horizontal-timeline .row .col-sm-4 {margin-bottom: 30px;}
-	.single-profile {max-width: 280px;}
+	.single-profile {max-width: 280px; border: 2px solid #e5ebf2 !important;}
+	
+	/* Maintain button alignment on very small screens */
+	.resume-download-btn {
+		margin-top: -10px !important;
+	}
+	
+	.contact-btn-hero {
+		margin-top: 20px !important;
+	}
 	
 	/* Smaller resume button for very small screens */
 	.header-text .resume-download-btn {
