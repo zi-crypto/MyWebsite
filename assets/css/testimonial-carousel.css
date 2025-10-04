@@ -1,0 +1,60 @@
+/* Enhanced styles for testimonial carousel */
+.owl-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 50%;
+  color: white !important;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  pointer-events: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Testimonial counter styles */
+.testimonial-counter {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5); 
+  color: white;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  z-index: 100;
+}
+
+/* Make sure the testimonial content stands out */
+.testimonial-box {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-text {
+  margin-bottom: 20px;
+}

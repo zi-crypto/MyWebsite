@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Admin - Ziad Amer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .login-form {
+            padding: 3rem;
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            width: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+        
+        .btn:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .dashboard {
+            display: none;
+            padding: 2rem;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+        }
+        
+        .stat-card h3 {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .testimonial-card {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: box-shadow 0.2s ease;
+        }
+        
+        .testimonial-card:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-info h4 {
+            margin-bottom: 0.25rem;
+            color: #333;
+        }
+        
+        .testimonial-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .testimonial-rating {
+            color: #ffc107;
+        }
+        
+        .testimonial-message {
+            background: white;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 4px solid #007bff;
+            margin: 1rem 0;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        
+        .testimonial-actions {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: flex-end;
+        }
+        
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        
+        .btn-success {
+            background-color: #28a745;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background-color: #218838;
+        }
+        
+        .btn-danger {
+            background-color: #dc3545;
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+        
+        .message {
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .logout-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+        
+        .logout-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #e0e0e0;
+            margin-bottom: 2rem;
+            gap: 0.5rem;
+        }
+        
+        .tab {
+            padding: 1rem 2rem;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s ease;
+        }
+        
+        .tab:hover {
+            color: #007bff;
+        }
+        
+        .tab.active {
+            color: #007bff;
+            border-bottom-color: #007bff;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .login-form {
+                padding: 2rem;
+            }
+            
+            .dashboard {
+                padding: 1rem;
+            }
+            
+            .testimonial-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Testimonial Management</h1>
+            <p>Review and approve testimonials for your website</p>
+            <button class="logout-btn" id="logout-btn" style="display: none;">Logout</button>
+        </div>
+        
+        <!-- Login Form -->
+        <div id="login-section" class="login-form">
+            <h2 style="margin-bottom: 1.5rem; color: #333;">Admin Login</h2>
+            <div id="login-message"></div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="admin-token">Admin Token</label>
+                    <input type="password" id="admin-token" placeholder="Enter your admin token" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+        
+        <!-- Dashboard -->
+        <div id="dashboard-section" class="dashboard">
+            <div id="dashboard-message"></div>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <h3 id="pending-count">0</h3>
+                    <p>Pending Reviews</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="approved-count">0</h3>
+                    <p>Approved & Live</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="total-count">0</h3>
+                    <p>Total Submitted</p>
+                </div>
+            </div>
+            
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab active" data-tab="pending">Pending Testimonials</button>
+                <button class="tab" data-tab="approved">All Approved Testimonials</button>
+            </div>
+            
+            <!-- Pending Testimonials Tab -->
+            <div id="pending-tab" class="tab-content active">
+                <div id="pending-testimonials-container">
+                    <div class="loading">Loading pending testimonials...</div>
+                </div>
+            </div>
+            
+            <!-- Approved Testimonials Tab -->
+            <div id="approved-tab" class="tab-content">
+                <div id="approved-testimonials-container">
+                    <div class="loading">Loading approved testimonials...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class TestimonialAdmin {
+            constructor() {
+                this.token = localStorage.getItem('adminToken');
+                this.allTestimonials = [];
+                this.approvedTestimonials = [];
+                this.currentTab = 'pending';
+                
+                this.init();
+            }
+            
+            init() {
+                if (this.token) {
+                    this.showDashboard();
+                    this.loadAllData();
+                } else {
+                    this.showLogin();
+                }
+                
+                this.setupEventListeners();
+            }
+            
+            setupEventListeners() {
+                document.getElementById('login-form').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    this.login();
+                });
+                
+                document.getElementById('logout-btn').addEventListener('click', () => {
+                    this.logout();
+                });
+                
+                // Tab switching
+                document.querySelectorAll('.tab').forEach(tab => {
+                    tab.addEventListener('click', (e) => {
+                        this.switchTab(e.target.dataset.tab);
+                    });
+                });
+            }
+            
+            switchTab(tabName) {
+                this.currentTab = tabName;
+                
+                // Update tab buttons
+                document.querySelectorAll('.tab').forEach(tab => {
+                    tab.classList.remove('active');
+                    if (tab.dataset.tab === tabName) {
+                        tab.classList.add('active');
+                    }
+                });
+                
+                // Update tab content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(`${tabName}-tab`).classList.add('active');
+                
+                // Load data if not already loaded
+                if (tabName === 'approved' && this.approvedTestimonials.length === 0) {
+                    this.loadApprovedTestimonials();
+                }
+            }
+            
+            async login() {
+                const token = document.getElementById('admin-token').value;
+                const loginBtn = document.querySelector('#login-form button');
+                const originalText = loginBtn.textContent;
+                
+                loginBtn.disabled = true;
+                loginBtn.textContent = 'Logging in...';
+                
+                try {
+                    // Test the token by making a request
+                    const response = await fetch('/.netlify/functions/admin-testimonials', {
+                        headers: {
+                            'Authorization': `Bearer ${token}`
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        this.token = token;
+                        localStorage.setItem('adminToken', token);
+                        this.showDashboard();
+                        this.loadAllData();
+                    } else {
+                        throw new Error('Invalid token');
+                    }
+                } catch (error) {
+                    this.showMessage('Invalid admin token', 'error', 'login-message');
+                } finally {
+                    loginBtn.disabled = false;
+                    loginBtn.textContent = originalText;
+                }
+            }
+            
+            logout() {
+                this.token = null;
+                localStorage.removeItem('adminToken');
+                this.showLogin();
+            }
+            
+            showLogin() {
+                document.getElementById('login-section').style.display = 'block';
+                document.getElementById('dashboard-section').style.display = 'none';
+                document.getElementById('logout-btn').style.display = 'none';
+            }
+            
+            showDashboard() {
+                document.getElementById('login-section').style.display = 'none';
+                document.getElementById('dashboard-section').style.display = 'block';
+                document.getElementById('logout-btn').style.display = 'block';
+            }
+            
+            async loadAllData() {
+                await Promise.all([
+                    this.loadPendingTestimonials(),
+                    this.loadApprovedTestimonials()
+                ]);
+                this.updateStats();
+            }
+            
+            async loadPendingTestimonials() {
+                try {
+                    const response = await fetch('/.netlify/functions/admin-testimonials', {
+                        cache: 'no-store',
+                        headers: {
+                            'Authorization': `Bearer ${this.token}`,
+                            'Cache-Control': 'no-cache, no-store, must-revalidate',
+                            'Pragma': 'no-cache'
+                        }
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error('Failed to load testimonials');
+                    }
+                    
+                    const data = await response.json();
+                    this.allTestimonials = data.testimonials;
+                    
+                    this.renderPendingTestimonials();
+                    
+                } catch (error) {
+                    console.error('Error loading pending testimonials:', error);
+                    this.showMessage('Failed to load pending testimonials', 'error', 'dashboard-message');
+                }
+            }
+            
+            async loadApprovedTestimonials() {
+                try {
+                    const response = await fetch('/.netlify/functions/get-testimonials', {
+                        cache: 'no-store',
+                        headers: {
+                            'Cache-Control': 'no-cache, no-store, must-revalidate',
+                            'Pragma': 'no-cache'
+                        }
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error('Failed to load approved testimonials');
+                    }
+                    
+                    const data = await response.json();
+                    this.approvedTestimonials = data.testimonials;
+                    
+                    this.renderApprovedTestimonials();
+                    
+                } catch (error) {
+                    console.error('Error loading approved testimonials:', error);
+                    this.showMessage('Failed to load approved testimonials', 'error', 'dashboard-message');
+                }
+            }
+            
+            updateStats() {
+                const pendingCount = this.allTestimonials.filter(t => t.fields.status === 'pending').length;
+                
+                document.getElementById('pending-count').textContent = pendingCount;
+                document.getElementById('approved-count').textContent = this.approvedTestimonials.length;
+                document.getElementById('total-count').textContent = this.allTestimonials.length;
+            }
+            
+            renderPendingTestimonials() {
+                const container = document.getElementById('pending-testimonials-container');
+                const pendingTestimonials = this.allTestimonials.filter(t => t.fields.status === 'pending');
+                
+                if (pendingTestimonials.length === 0) {
+                    container.innerHTML = '<div class="loading">No pending testimonials to review</div>';
+                    return;
+                }
+                
+                const testimonialsHTML = pendingTestimonials.map(testimonial => {
+                    const t = testimonial.fields;
+                    const stars = '★'.repeat(t.rating || 5) + '☆'.repeat(5 - (t.rating || 5));
+                    
+                    return `
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="testimonial-info">
+                                    <h4>${this.escapeHtml(t.name)}</h4>
+                                    <p>${this.escapeHtml(t.company || 'No company')}</p>
+                                </div>
+                                <div class="testimonial-rating">${stars}</div>
+                            </div>
+                            
+                            <div class="testimonial-message">
+                                "${this.escapeHtml(t.message)}"
+                            </div>
+                            
+                            <p style="color: #666; font-size: 0.875rem; margin-bottom: 1rem;">
+                                Email: ${this.escapeHtml(t.email)}<br>
+                                Submitted: ${new Date(testimonial.createdTime).toLocaleDateString()}
+                            </p>
+                            
+                            <div class="testimonial-actions">
+                                <button class="btn-sm btn-success" onclick="admin.approveTestimonial('${testimonial.id}')">
+                                    ✓ Approve
+                                </button>
+                                <button class="btn-sm btn-danger" onclick="admin.rejectTestimonial('${testimonial.id}')">
+                                    ✗ Reject
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+                
+                container.innerHTML = `<div class="testimonials-grid">${testimonialsHTML}</div>`;
+            }
+            
+            renderApprovedTestimonials() {
+                const container = document.getElementById('approved-testimonials-container');
+                
+                if (this.approvedTestimonials.length === 0) {
+                    container.innerHTML = '<div class="loading">No approved testimonials yet</div>';
+                    return;
+                }
+                
+                const testimonialsHTML = this.approvedTestimonials.map(testimonial => {
+                    const stars = '★'.repeat(testimonial.rating || 5) + '☆'.repeat(5 - (testimonial.rating || 5));
+                    
+                    return `
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="testimonial-info">
+                                    <h4>${this.escapeHtml(testimonial.name)}</h4>
+                                    <p>${this.escapeHtml(testimonial.company || 'No company')}</p>
+                                </div>
+                                <div class="testimonial-rating">${stars}</div>
+                            </div>
+                            
+                            <div class="testimonial-message">
+                                "${this.escapeHtml(testimonial.message)}"
+                            </div>
+                            
+                            <p style="color: #666; font-size: 0.875rem; margin-bottom: 1rem;">
+                                <strong>✓ Live on website</strong><br>
+                                Approved: ${new Date(testimonial.approvedAt).toLocaleDateString()}
+                            </p>
+                            
+                            <div class="testimonial-actions">
+                                <button class="btn-sm btn-danger" onclick="admin.deleteApprovedTestimonial('${testimonial.id}')">
+                                    🗑 Delete from Website
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+                
+                container.innerHTML = `<div class="testimonials-grid">${testimonialsHTML}</div>`;
+            }
+            
+            async approveTestimonial(testimonialId) {
+                if (!confirm('Are you sure you want to approve this testimonial? It will appear on the website.')) {
+                    return;
+                }
+                
+                try {
+                    const response = await fetch('/.netlify/functions/admin-testimonials', {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': `Bearer ${this.token}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ testimonialId })
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error('Failed to approve testimonial');
+                    }
+                    
+                    this.showMessage('✓ Testimonial approved successfully! It will appear on the website shortly.', 'success', 'dashboard-message');
+                    await this.loadAllData();
+                    
+                } catch (error) {
+                    console.error('Error approving testimonial:', error);
+                    this.showMessage('Failed to approve testimonial', 'error', 'dashboard-message');
+                }
+            }
+            
+            async rejectTestimonial(testimonialId) {
+                if (!confirm('Are you sure you want to reject and delete this testimonial? This cannot be undone.')) {
+                    return;
+                }
+                
+                try {
+                    const response = await fetch('/.netlify/functions/admin-testimonials', {
+                        method: 'DELETE',
+                        headers: {
+                            'Authorization': `Bearer ${this.token}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ testimonialId })
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error('Failed to reject testimonial');
+                    }
+                    
+                    this.showMessage('✓ Testimonial rejected and deleted successfully!', 'success', 'dashboard-message');
+                    await this.loadAllData();
+                    
+                } catch (error) {
+                    console.error('Error rejecting testimonial:', error);
+                    this.showMessage('Failed to reject testimonial', 'error', 'dashboard-message');
+                }
+            }
+            
+            async deleteApprovedTestimonial(testimonialId) {
+                if (!confirm('⚠️ WARNING: This will permanently delete this testimonial from Airtable and remove it from your website. This cannot be undone. Are you sure?')) {
+                    return;
+                }
+                
+                try {
+                    const response = await fetch('/.netlify/functions/delete-testimonial', {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': `Bearer ${this.token}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ id: testimonialId })
+                    });
+                    
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(errorData.error || 'Failed to delete testimonial');
+                    }
+                    
+                    this.showMessage('✓ Testimonial deleted successfully! It will be removed from the website shortly.', 'success', 'dashboard-message');
+                    await this.loadAllData();
+                    
+                } catch (error) {
+                    console.error('Error deleting testimonial:', error);
+                    this.showMessage(`Failed to delete testimonial: ${error.message}`, 'error', 'dashboard-message');
+                }
+            }
+            
+            showMessage(message, type, containerId) {
+                const container = document.getElementById(containerId);
+                container.innerHTML = `<div class="message ${type}">${message}</div>`;
+                
+                setTimeout(() => {
+                    container.innerHTML = '';
+                }, 5000);
+            }
+            
+            escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text || '';
+                return div.innerHTML;
+            }
+        }
+        
+        // Initialize admin panel
+        const admin = new TestimonialAdmin();
+    </script>
+</body>
+</html>

@@ -131,8 +131,9 @@ $(document).ready(function(){
 						}
 					}
 				});
-				
-				// Testimonial carousel initialization
+						// Testimonial carousel initialization
+				// Add a special marker to signal this is the original initialization
+				window.originalCarouselInitialized = true;
 				$('#testimonial-carousel').owlCarousel({
 					items: 1,
 					loop: true,

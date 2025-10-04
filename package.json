@@ -1,0 +1,25 @@
+{
+  "name": "testimonial-system-functions",
+  "version": "1.0.0",
+  "description": "Serverless functions for testimonial management system",
+  "main": "index.js",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "netlify build",
+    "deploy": "netlify deploy --prod"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  },
+  "keywords": [
+    "testimonials",
+    "serverless",
+    "netlify",
+    "airtable"
+  ],
+  "author": "Ziad Amer",
+  "license": "MIT"
+}
