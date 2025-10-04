@@ -1,4 +1,10 @@
 node_modules
 
+# Environment variables - NEVER commit these!
+.env
+.env.local
+.env.production
+.env.development
+
 # Local Netlify folder
 .netlify
