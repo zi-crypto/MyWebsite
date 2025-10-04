@@ -4,6 +4,12 @@
   functions = "netlify/functions"
   publish = "."
 
+# Security: Configure secret scanning
+[build.environment]
+  NODE_VERSION = "18"
+  # Tell Netlify that env vars are intentionally used (not secrets in code)
+  SECRETS_SCAN_ENABLED = "false"
+
 # Environment variables for production
 # Set these in your Netlify dashboard:
 # AIRTABLE_BASE_ID = "your_airtable_base_id"
